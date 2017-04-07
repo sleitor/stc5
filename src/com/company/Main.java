@@ -1,16 +1,21 @@
 package com.company;
 
-/*
-1. Напишите программу, которая каждую секунду отображает на экране данные о времени,
-прошедшем от начала сессии, а другой ее поток выводит сообщение каждые 5 секунд.
-Предусмотрите возможность ежесекундного оповещения потока, воспроизводящего сообщение,
-потоком, отсчитывающим время.
-2. Не внося изменений в код потока-"хронометра" , добавьте еще один поток,
-который выводит на экран другое сообщение каждые 7 секунд. Предполагается
-использование методов wait(), notifyAll().
-*/
-
 import static java.lang.Thread.sleep;
+
+/*
+Написать программу для вычисления многочлена с использованием собственного семафора.
+ 1) Вид многочлена- а^3 + b^2 + c
+ 2) Использовать для вычисления куба, квадрата и c- отдельные классы
+ 3) Результат выводить в режиме реального времени в класс потребитель (Consumer). Использовать его функцию с
+ 3мя аргументами met(int kube, int kvadro, int simple)
+ 3.1) Если функцию Consumer-а вызывает Кубатор- то он передает в нее такие аргументы (число, 0, 0)
+ 3.2) Если функцию Consumer-а вызывает Квадратор- то он передает в нее такие аргументы (0, число, 0)
+ 3.3) Если функцию Consumer-а вызывает Простатор- то он передает в нее такие аргументы (0, 0, число)
+ 4) Условие семафора- допускается одновременный вызов метода Consumer-а РАЗНЫМИ классами
+ 4.1) Пример: Кубатор, Квадратор параллельно- можно
+ 4.2) Пример: Кубатор, Кубатор- нельзя
+ 5) На вход в каждый вычислитель- идет массив числе
+ 5.1) ЧИсла можно забить самим*/
 
 public class Main {
     private final static Object shared = new Object();
@@ -19,80 +24,36 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-         Thread thread1 = new Thread(new Runnable()
-        {
-            public void run() //Этот метод будет выполняться в побочном потоке
-            {
-                long start = System.currentTimeMillis();
-                for (int i = 0; i < 30; i++) {
 
-                    try {
-                        sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    x++;
-                    System.out.println("Count(" + (x-1) +") Привет из первого потока! " + (System.currentTimeMillis()-start));
-                    synchronized (shared){
-                        shared.notifyAll();
-                    }
-
-                    //msgQueue.hasMessages();
-
-                }
-
-            }
-
-        });
-        thread1.start();	//Запуск потока
-
-        //Создание потока
-        final Thread thead2 = new Thread(new Runnable()
-        {
-            public synchronized void run() //Этот метод будет выполняться в побочном потоке
-            {
-                while (true) {
-/*
-                    try {
-                        if ((x%5)==0) {
-                            Thread.yield();
-                        }
-                        else
-
-                        if (x==30) return;
-
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-*/                  if ((x%5)==0) {
-                        System.out.println("Привет из второго потока!");
-                            synchronized (shared) {
-                                try {
-                                    shared.wait();
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                    }
-
-                    if (x==30) return;
-                }
-            }
-        });
-        thead2.start();	//Запуск потока
-        //Создание потока
-/*
-        Thread thead3 = new Thread(new Runnable()
-        {
-            public void run() //Этот метод будет выполняться в побочном потоке
-            {
-                System.out.println("Привет из побочного потока!");
-            }
-        });
-        thead3.start();	//Запуск потока
-/**/
         System.out.println("Главный поток завершён...");
+        int sim[] = new int[5];
+        sim[0] = 36;
+        sim[1] = 338;
+        sim[2] = 65;
+        sim[3] = 56;
+        sim[4] = 35;
 
-}
+        for (int i = 0; i < sim.length; i++) {
+            Simple simple = new Simple(sim[i], "Simple-");
+            simple.start();
+        }
+        int doub[] = new int[3];
+        doub[0] = 36;
+        doub[1] = 45;
+        doub[2] = 65;
+
+        for (int i = 0; i < doub.length; i++) {
+            Kvadro kvadro = new Kvadro(doub[i], "Double-");
+            kvadro.start();
+        }
+        int kub[] = new int[3];
+        kub[0] = 1;
+        kub[1] = 2;
+        kub[2] = 3;
+
+        for (int i = 0; i < kub.length; i++) {
+            Kube kube = new Kube(doub[i], "Kube-");
+            kube.start();
+        }
+    }
 }
