@@ -13,26 +13,15 @@ package com.company;
 import static java.lang.Thread.sleep;
 
 public class Main {
-    Object shared = new Object();
+    private final static Object shared = new Object();
 
-    static int x = 1;
+    volatile static Integer x = 0;
 
     public static void main(String[] args) {
 	// write your code here
-/*
-        Theads thead1 = new Theads();
-        Thread Thread1 = new Thread(thead1);
-        Thread1.start();
-        try {
-            thead1.wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-*/
-        //Создание потока
-        Thread thread1 = new Thread(new Runnable()
+         Thread thread1 = new Thread(new Runnable()
         {
-            public synchronized void run() //Этот метод будет выполняться в побочном потоке
+            public void run() //Этот метод будет выполняться в побочном потоке
             {
                 long start = System.currentTimeMillis();
                 for (int i = 0; i < 30; i++) {
@@ -44,7 +33,9 @@ public class Main {
                     }
                     x++;
                     System.out.println("Count(" + (x-1) +") Привет из первого потока! " + (System.currentTimeMillis()-start));
-                    thead2.notifyAll();
+                    synchronized (shared){
+                        shared.notifyAll();
+                    }
 
                     //msgQueue.hasMessages();
 
@@ -74,13 +65,15 @@ public class Main {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-*/                  if (/*(x%5)==0*/true) {
+*/                  if ((x%5)==0) {
                         System.out.println("Привет из второго потока!");
-                        try {
-                            this.wait();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+                            synchronized (shared) {
+                                try {
+                                    shared.wait();
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
                     }
 
                     if (x==30) return;
