@@ -3,11 +3,20 @@ package com.company;
 /**
  * Created by Троицкий Дмитрий on 06.04.2017.
  */
-public class Theads extends Thread {
+public class Theads implements Runnable {
+
+    Object shared;
+
+    Theads(Object o) {
+        shared = o;
+    }
+
 
     @Override
     public void run()	//Этот метод будет выполнен в побочном потоке
     {
         System.out.println("Привет из побочного потока!");
+
+
     }
 }

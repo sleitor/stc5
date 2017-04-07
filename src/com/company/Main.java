@@ -10,28 +10,41 @@ package com.company;
 использование методов wait(), notifyAll().
 */
 
-public class Main {
+import static java.lang.Thread.sleep;
 
-    volatile static int x = 1;
+public class Main {
+    Object shared = new Object();
+
+    static int x = 1;
 
     public static void main(String[] args) {
 	// write your code here
-
+/*
+        Theads thead1 = new Theads();
+        Thread Thread1 = new Thread(thead1);
+        Thread1.start();
+        try {
+            thead1.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+*/
         //Создание потока
         Thread thread1 = new Thread(new Runnable()
         {
-            public void run() //Этот метод будет выполняться в побочном потоке
+            public synchronized void run() //Этот метод будет выполняться в побочном потоке
             {
                 long start = System.currentTimeMillis();
                 for (int i = 0; i < 30; i++) {
 
                     try {
-                        Thread.sleep(1000);
+                        sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     x++;
                     System.out.println("Count(" + (x-1) +") Привет из первого потока! " + (System.currentTimeMillis()-start));
+                    thead2.notifyAll();
 
                     //msgQueue.hasMessages();
 
@@ -43,9 +56,9 @@ public class Main {
         thread1.start();	//Запуск потока
 
         //Создание потока
-        Thread thead2 = new Thread(new Runnable()
+        final Thread thead2 = new Thread(new Runnable()
         {
-            public void run() //Этот метод будет выполняться в побочном потоке
+            public synchronized void run() //Этот метод будет выполняться в побочном потоке
             {
                 while (true) {
 /*
@@ -61,10 +74,10 @@ public class Main {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-*/                  if ((x%5)==0) {
+*/                  if (/*(x%5)==0*/true) {
                         System.out.println("Привет из второго потока!");
                         try {
-                            Thread.sleep(1000);
+                            this.wait();
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
