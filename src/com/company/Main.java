@@ -12,81 +12,95 @@ package com.company;
 
 public class Main {
 
-    volatile static int x = 1;
+    static Object shared = new Object ();
+
+    static Integer x = 0;
 
     public static void main(String[] args) {
 	// write your code here
 
-        //Создание потока
-        Thread thread1 = new Thread(new Runnable()
-        {
-            public void run() //Этот метод будет выполняться в побочном потоке
-            {
-                long start = System.currentTimeMillis();
-                for (int i = 0; i < 30; i++) {
+        Thread thread1 = new Thread(new Runnable() {
 
+            public void run() {
+                long start = System.currentTimeMillis();
+                for (int i = 0; i < 31; i++) {
+                    System.out.println("Count(" + (x) +") Привет из первого потока! " + (System.currentTimeMillis()-start));
+/* DOES NOT WORK!!!
+                    synchronized (x) {
+                        x.notifyAll ();
+                    }
+DOES NOT WORK!!! */
+                    synchronized (shared) {
+                        shared.notifyAll ();
+                    }
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep ( 1000 );
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        e.printStackTrace ();
                     }
                     x++;
-                    System.out.println("Count(" + (x-1) +") Привет из первого потока! " + (System.currentTimeMillis()-start));
-
-                    //msgQueue.hasMessages();
-
                 }
-
+                System.out.println ("Первый поток завершен....");
             }
-
         });
-        thread1.start();	//Запуск потока
+        thread1.start();
 
-        //Создание потока
-        Thread thead2 = new Thread(new Runnable()
-        {
-            public void run() //Этот метод будет выполняться в побочном потоке
-            {
+        Thread thead2 = new Thread(new Runnable() {
+
+            public void run() {
+
                 while (true) {
-/*
-                    try {
-                        if ((x%5)==0) {
-                            Thread.yield();
-                        }
-                        else
-
-                        if (x==30) return;
-
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                    if ((x%5)==0) {
+                        System.out.println("ПРИВЕТ ИЗ ВТОРОГО ПОТОКА!");
                     }
-*/                  if ((x%5)==0) {
-                        System.out.println("Привет из второго потока!");
+/* DOES NOT WORK!!!
+                    synchronized (x) {
                         try {
-                            Thread.sleep(1000);
+                            x.wait ();
                         } catch (InterruptedException e) {
-                            e.printStackTrace();
+                            e.printStackTrace ();
+                        }
+                    }
+DOES NOT WORK!!! */
+                    synchronized (shared) {
+                        try {
+                            shared.wait ();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace ();
                         }
                     }
 
-                    if (x==30) return;
+                    if (x==30) {
+                        System.out.println ("ВТОРОЙ ПОТОК ЗАВЕРШЕН....");
+                        return;
+                    }
                 }
             }
         });
-        thead2.start();	//Запуск потока
-        //Создание потока
-/*
-        Thread thead3 = new Thread(new Runnable()
-        {
-            public void run() //Этот метод будет выполняться в побочном потоке
-            {
-                System.out.println("Привет из побочного потока!");
-            }
-        });
-        thead3.start();	//Запуск потока
-/**/
-        System.out.println("Главный поток завершён...");
+        thead2.start();
 
-}
+// Такой синтаксис тоже допустим?
+        Thread thread3 = new Thread (  ) {
+
+            public void run () {
+
+                for (int i = 0; i < 30; i++) {
+                    if (x % 7 == 0){
+                        System.out.println ("ПРИВЕТ ИЗ ТРЕТЬЕГО ПОТОКА!");
+                    }
+                    synchronized (shared){
+                        try {
+                            shared.wait ();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace ();
+                        }
+                    }
+                }
+                System.out.println ("ТРЕТИЙ ПОТОК ЗАВЕРШЕН!");
+            }
+        };
+        thread3.start ();
+
+        System.out.println("Главный поток завершён...");
+    }
 }
