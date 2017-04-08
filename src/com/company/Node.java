@@ -3,20 +3,11 @@ package com.company;
 /**
  * Created by Троицкий Дмитрий on 07.04.2017.
  */
-public class Node<N> {
-    private Node next;
-    private Node prev;
+public class Node<N> extends Object {
+
+    private Node next = null;
+    private Node prev = null;
     private N data;
-
-    public Node() {
-        this.next = null;
-        this.prev = null;
-    }
-
-    public Node(Node prev){
-        this.next = null;
-        this.prev = prev;
-    }
 
     public Node(N l) {
         data = l;
@@ -31,12 +22,29 @@ public class Node<N> {
     }
 
     public Node getPrev() {
-        return prev;
+        return this.prev;
     }
 
     public void setPrev(Node prev) {
         this.prev = prev;
     }
+
+    public boolean hasPrev() throws NullPointerException{
+        if ( this.getPrev () != null )
+            return true;
+        else
+            return false;
+    }
+
+    public boolean hasNext() throws NullPointerException{
+        if ( this.getNext () != null )
+            return true;
+        else
+            return false;
+    }
+
+
+
 
     public N getData() {
         return data;
@@ -46,8 +54,15 @@ public class Node<N> {
         this.data = data;
     }
 
-    @Override
-    public boolean equals(Object obj){
-        return data.equals(obj);
+    // Скорее всего не пригодится.
+
+    public boolean equals(Node<N> node){
+        if (this.getData() == node.getData() && this.getNext() == node.getNext() && this.getPrev() == node.getPrev())
+            return true;
+        else
+            return false;
     }
+
+
+
 }
