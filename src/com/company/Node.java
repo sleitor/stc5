@@ -13,22 +13,27 @@ public class Node<N> extends Object {
         data = l;
     }
 
+    // DONE
     public Node getNext() {
         return next;
     }
 
+    // DONE
     public void setNext(Node next) {
         this.next = next;
     }
 
+    // DONE
     public Node getPrev() {
         return this.prev;
     }
 
+    // DONE
     public void setPrev(Node prev) {
         this.prev = prev;
     }
 
+    // DONE
     public boolean hasPrev() throws NullPointerException{
         if ( this.getPrev () != null )
             return true;
@@ -36,6 +41,7 @@ public class Node<N> extends Object {
             return false;
     }
 
+    // DONE
     public boolean hasNext() throws NullPointerException{
         if ( this.getNext () != null )
             return true;
@@ -43,19 +49,25 @@ public class Node<N> extends Object {
             return false;
     }
 
-
-
-
+    // DONE
     public N getData() {
         return data;
     }
 
+    // DONE
     public void setData(N data) {
         this.data = data;
     }
 
+    // DONE
+    public Node copyNode () {
+        Node result = new Node ( this.data );
+        return result;
+    }
+
     // Скорее всего не пригодится.
 
+    // DONE
     public boolean equals(Node<N> node){
         if (this.getData() == node.getData() && this.getNext() == node.getNext() && this.getPrev() == node.getPrev())
             return true;

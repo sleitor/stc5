@@ -1,6 +1,8 @@
 package com.company;
 
 
+import java.util.List;
+
 import static java.lang.System.gc;
 
 public class Main {
@@ -70,7 +72,6 @@ public class Main {
         linkedList.addAll (newLinkedList);
         linkedList.printList (linkedList);
 
-
         System.out.println("Try add Node by Node  to LinkedList in center:");
         System.out.println();
 
@@ -78,7 +79,8 @@ public class Main {
         linkedList.add (2,addNode2 );
         linkedList.printList(linkedList);
 
-/*
+        List sd = new java.util.LinkedList (  );
+
         System.out.println("Try add Creating new new LinkedList and add new to current in center:");
         System.out.println();
 
@@ -88,6 +90,6 @@ public class Main {
         }
         linkedList.addAll (2,newNewLinkedList);
         linkedList.printList (linkedList);
-*/
+
     }
 }

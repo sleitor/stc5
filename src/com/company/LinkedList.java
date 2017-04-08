@@ -31,6 +31,7 @@ public class LinkedList<L> implements List {
 
     // DONE
     public Node<L> get (int index) {
+        checkIndex(index);
         if ( index < (Math.round ( this.size () / 2 )) ) {
             Node<L> node = head;
             for (int i = 0; i < index; i++) {
@@ -86,15 +87,22 @@ public class LinkedList<L> implements List {
         } else return false;
     }
 
-    // NOT COMPLETE!!! We make for a Node but required for Object
-    @Override
-    public boolean remove (Object o) {
-        return false;
-    }
+                // NOT COMPLETE!!! We make for a Node but required for Object
+                @Override
+                public boolean remove (Object o) {
+                    return false;
+                }
+
+                // NOT COMPLETE!!! We make for a Node but required for Object
+                @Override
+                public Object remove (int index) {
+                    return null;
+                }
 
     // DONE
     public void removeOf (int index) {
 
+        checkIndex(index);
         Node monitor = this.get ( index );
 
         if (monitor.hasPrev () )
@@ -132,6 +140,7 @@ public class LinkedList<L> implements List {
 
     // DONE
     public void add (int index, Node element) {
+        checkIndex(index);
         Node monitor = this.get ( index );
 
         if ( size == 0 ) {
@@ -191,6 +200,7 @@ public class LinkedList<L> implements List {
 
     // DONE
     public boolean addAll (int index, LinkedList c) {
+        checkIndex(index);
         if (index == 0) {
             addAllHead(c);
         } else {
@@ -249,20 +259,122 @@ public class LinkedList<L> implements List {
 
     }
 
-
-    private boolean checkIndex (int index) {
-        return index >= 0 && index<=this.size  ;
+    // DONE internal FUNCTIONAL
+    private void checkIndex (int index) {
+        if (index >= 0 && index<=this.size) {}
+        else throw new IndexOutOfBoundsException(error(index));
     }
 
+    // DONE internal FUNCTIONAL
+    private String error (int index) {
+        return "Not alowed index: " + index + ". min = 0  max =" + this.size;
+    }
+
+    // DONE ADD UTILITY :)
+    public LinkedList copyList() {
+        return subList ( 0,this.size );
+    }
+
+    // DONE
     @Override
-    public List subList (int fromIndex, int toIndex) {
-        return null;
+    public LinkedList subList (int fromIndex, int toIndex) {
+
+        checkIndex ( fromIndex );
+        checkIndex ( toIndex );
+
+        LinkedList result = new LinkedList ();
+        for (int i = fromIndex; i <= toIndex; i++) {
+            result.add ( this.get ( i ).copyNode() );
+        }
+        return result;
     }
 
+    // DONE
+    @Override
+    public Object[] toArray () {
+        Object[] o = new Object[this.size];
+        for (int i = 0; i < this.size; i++) {
+            o[i] = this.get ( i ).getData ();
+        }
+        return o;
+    }
+
+    // DONE
+    @Override
+    public Object[] toArray (Object[] a) {
+        Object[] o = new Object[this.size];
+        for (int i = 0; i < this.size; i++) {
+            o[i] = this.get ( i ).getData ();
+        }
+        a = o.clone ();
+        return o;
+    }
+
+    // DONE
+    public boolean removeAll (LinkedList list) {
+
+        Boolean flag = false;
+        for (int i = 0; i < list.size; i++) {
+            for (int j = 0; j < this.size; j++) {
+                if (list.get ( i ).getData () == this.get ( j ).getData ()) {
+                    this.remove ( j );
+                    flag = true;
+                }
+            }
+
+        }
+        return flag;
+    }
+
+                    // NOT COMPLETE!!! We make for a LikedList but required for Collections
+                    @Override
+                    public boolean removeAll (Collection c) {
+                        return false;
+                    }
+
+    // DONE
+    public Node<L> set (int index, Node<L> el) {
+        checkIndex ( index );
+        Node monitor = this.get ( index );
+        monitor.setData ( el.getData () );
+        return monitor;
+    }
+
+                    // NOT COMPLETE!!! We make for a Node but required for Object
+                    @Override
+                    public Object set (int index, Object element) {
+                        return null;
+                    }
+
+    // DONE
+    public boolean retainAll (LinkedList c) {
+
+        Boolean flag = null;
+
+        for (int i = 0; i < this.size; i++) {
+            flag = true;
+            Node monitor = get ( i );   // Optimization
+            for (int j = 0; j < c.size; j++) {
+                if (c.get ( j ).getData () == monitor)
+                        flag = false;
+            }
+            if ( flag ) this.remove ( monitor );
+        }
+        return flag;
+    }
+
+                    // NOT COMPLETE!!! We make for a LikedList but required for Collections
+                    @Override
+                    public boolean retainAll (Collection c) {
+                        return false;
+                    }
+
+    // DONE
     public Iterator<Node> descendingIterator() {
         return new DescendingIterator();
     }
 
+    // DONE
     private class DescendingIterator implements Iterator<Node> {
         private final ListItr itr = new ListItr(size());
         public boolean hasNext() {
@@ -272,18 +384,8 @@ public class LinkedList<L> implements List {
             return itr.previous();
         }
         public void remove() {
-//            LinkedList.this.remove ( Node  );
+            LinkedList.this.remove ( itr  );
         }
-    }
-
-    @Override
-    public boolean retainAll (Collection c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll (Collection c) {
-        return false;
     }
 
     @Override
@@ -291,21 +393,6 @@ public class LinkedList<L> implements List {
         return false;
     }
 
-    @Override
-    public Object[] toArray (Object[] a) {
-        return new Object[0];
-    }
-
-    @Override
-    public Object set (int index, Object element) {
-        return null;
-    }
-
-
-    @Override
-    public Object remove (int index) {
-        return null;
-    }
 
     @Override
     public int indexOf (Object o) {
@@ -322,20 +409,20 @@ public class LinkedList<L> implements List {
         return null;
     }
 
+    // DONE
     @Override
     public ListIterator<Node> listIterator(int index) {
-//        checkPositionIndex(index);
+        checkIndex (index);
         return new ListItr(index);
     }
 
+    // DONE
     private class ListItr implements ListIterator<Node> {
         private Node<L> lastReturned = null;
         private Node<L> next;
         private int nextIndex;
-//        private int expectedModCount = modCount;
 
         ListItr(int index) {
-            // assert isPositionIndex(index);
             next = (index == size) ? null : get (index);
             nextIndex = index;
         }
@@ -345,7 +432,6 @@ public class LinkedList<L> implements List {
         }
 
         public Node next() {
-//            checkForComodification();
             if (!hasNext())
                 throw new NoSuchElementException ();
 
@@ -360,7 +446,6 @@ public class LinkedList<L> implements List {
         }
 
         public Node previous() {
-//            checkForComodification();
             if (!hasPrevious())
                 throw new NoSuchElementException();
 
@@ -429,44 +514,5 @@ public class LinkedList<L> implements List {
     public Iterator iterator () {
         return null;
     }
-
-    @Override
-    public Object[] toArray () {
-        return new Object[0];
-    }
-
-
-
-
-
-/*
-    @Override
-    public Iterator<Node> iterator () {
-        return new Iterator<Node> () {
-            private Node<L> current = ;
-
-            @Override
-            public boolean hasNext () {
-                return (current.hasNext () != null);
-            }
-
-            @Override
-            public L next () throws IndexOutOfBoundsException {
-                L result = current.getData ();
-                if ( !current.hasNext () ) throw new IndexOutOfBoundsException ( "End of list." );
-                current = current.next;
-                return result;
-            }
-
-            @Override
-            public void remove () {
-
-            }
-        };
-
-        return null;
-    }
-*/
-
 
 }
