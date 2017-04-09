@@ -1,6 +1,6 @@
 package com.company;
 
-import javax.swing.plaf.TableHeaderUI;
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -22,22 +22,14 @@ public class Reader extends Thread {
         try {
             scanner = new Scanner (this.resource.getData ());
         } catch (FileNotFoundException e) {
-            e.printStackTrace ();
+            System.out.println ("Ошибка!!! Файл " + this.resource.getData () + " неудалось открыть.");
+            return;
         }
-        System.out.println ( Thread.currentThread ().getName () + " Выбранный ресурс: file" + this.resource.getName () );
 
+        System.out.println ( Thread.currentThread ().getName () + " Выбранный ресурс: file" + this.resource.getName () );
         while (scanner.hasNext ()){
             Counter.check (scanner.next ());
-/*            synchronized (Counter.door){
-
-                try {
-                    Counter.door.wait ();
-                } catch (InterruptedException e) {
-                    e.printStackTrace ();
-                }
-
-            }
-*/        }
+        }
 
     }
 }

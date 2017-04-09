@@ -23,7 +23,7 @@ public class Main {
         System.out.println ("Запуск основного потока.");
         System.out.println ();
 
-        Resource resource[] = new Resource[3];
+        Resource resource[] = new Resource[5];
 
         for (Integer i = 0; i < resource.length; i++) {
 

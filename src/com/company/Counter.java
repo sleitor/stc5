@@ -12,7 +12,8 @@ public class Counter {
     synchronized static void check (String next) {
 
         int value = 0;
-
+        next = next.replaceAll ( "[\\d.,!?a-zA-Z]+","" );
+        if (next.length () == 0) return;
         if (dictionary.containsKey ( next )) {
 
             value = dictionary.get ( next );
