@@ -40,7 +40,7 @@ public class Reader extends Thread {
         System.out.println ( Thread.currentThread ().getName () + " Выбранный ресурс: file" + this.resource.getName () );
 
         try {
-            Thread.sleep ( 7000 );
+            Thread.sleep ( 1000 );
         } catch (InterruptedException e) {
             System.out.println ("Системная ошибка. Надеюсь все впорядке.");
         }
