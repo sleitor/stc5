@@ -2,6 +2,7 @@ package com.company;
 
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -19,17 +20,35 @@ public class Reader extends Thread {
     @Override
     public void run () {
 
+        long time = System.currentTimeMillis ();
+
         try {
             scanner = new Scanner (this.resource.getData ());
         } catch (FileNotFoundException e) {
             System.out.println ("Ошибка!!! Файл " + this.resource.getData () + " неудалось открыть.");
             return;
+        } catch (NullPointerException e) {
+            try {
+                scanner = new Scanner (this.resource.getUrldata ().openStream());
+            } catch (IOException e1) {
+                System.out.println ("Ошибка!!! Что вы пытаетесь мне скормить??? " + this.resource.getUrldata () + " неудалось открыть.");
+                return;
+            }
+
         }
 
         System.out.println ( Thread.currentThread ().getName () + " Выбранный ресурс: file" + this.resource.getName () );
+
+        try {
+            Thread.sleep ( 7000 );
+        } catch (InterruptedException e) {
+            System.out.println ("Системная ошибка. Надеюсь все впорядке.");
+        }
         while (scanner.hasNext ()){
             Counter.check (scanner.next ());
         }
+
+        System.out.println ("Время выполнения потока: " + (System.currentTimeMillis () - time));
 
     }
 }

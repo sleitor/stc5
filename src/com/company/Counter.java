@@ -12,7 +12,7 @@ public class Counter {
     synchronized static void check (String next) {
 
         int value = 0;
-        next = next.replaceAll ( "[\\d.,!?a-zA-Z]+","" );
+        next = next.replaceAll ( "[\\d.,!?a-zA-Z:/()_]+","" );
         if (next.length () == 0) return;
         if (dictionary.containsKey ( next )) {
 
@@ -25,7 +25,7 @@ public class Counter {
 
         sum++;
 
-        System.out.printf ("%25s %3s %s %4s %s",next, value , "Обработано слов (", sum ,")");
+        System.out.printf ("%25s  %4s %s %4s %s",next, value , "Обработано слов (", sum ,")");
         System.out.println ();
     }
 }

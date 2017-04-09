@@ -14,7 +14,10 @@ package com.company;
 
 import com.sun.istack.internal.NotNull;
 
+import javax.swing.plaf.TableHeaderUI;
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Main {
 
@@ -24,19 +27,40 @@ public class Main {
         System.out.println ();
 
         Resource resource[] = new Resource[5];
+        Reader reader[] = new Reader[10];
+        long time = System.currentTimeMillis ();
+
 
         for (Integer i = 0; i < resource.length; i++) {
 
             resource[i] = new Resource(i.toString () , new File("src\\com\\company\\Resources\\file" + i));
-            Reader reader = new Reader (resource[i]);
-            reader.start ();
+            reader[i] = new Reader (resource[i]);
+            reader[i].start ();
         }
 
+        for (Integer i = 5; i < reader.length; i++) {
 
+            try {
+                resource[i-5] = new Resource(i.toString () , new URL ("https://raw.githubusercontent.com/sleitor/stc5/Lab1(multi_reader)/src/com/company/Resources/file" + (i-5)));
+            } catch (MalformedURLException e) {
+                System.out.println ("Невозможно получить файл по ссылке!");
+            }
 
+            reader[i] = new Reader (resource[i-5]);
+            reader[i].start ();
+        }
 
+        for (int i = 0; i < reader.length; i++) {
+            try {
+                reader[i].join ();
+            } catch (InterruptedException e) {
+                System.out.println ("Невозможно присоединить потоки.");
+            }catch (NullPointerException e) {
+                System.out.println ("Ай-яй-яй. Ошибочка случилась");
+            }
+        }
 
-        System.out.println ("Завершение основного потока.");
+        System.out.println ("Время выполнения программы: " + (System.currentTimeMillis () - time));
 
     }
 }
