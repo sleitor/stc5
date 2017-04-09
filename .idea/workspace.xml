@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42398c1f-d69d-4b28-ba71-1713f7bee44b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Consumer.java" afterPath="$PROJECT_DIR$/src/com/company/Consumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Kube.java" afterPath="$PROJECT_DIR$/src/com/company/Kube.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Kvadro.java" afterPath="$PROJECT_DIR$/src/com/company/Kvadro.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Simple.java" afterPath="$PROJECT_DIR$/src/com/company/Simple.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +33,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1602">
-              <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+            <state relative-caret-position="154">
+              <caret line="59" column="33" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -611,12 +607,12 @@
       <workItem from="1491469321693" duration="92000" />
       <workItem from="1491469792117" duration="4118000" />
       <workItem from="1491476706453" duration="70000" />
-      <workItem from="1491674534806" duration="12944000" />
+      <workItem from="1491674534806" duration="13302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26594000" />
+    <option name="totallyTimeSpent" value="26952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -935,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
-          <caret line="118" column="1" lean-forward="true" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+        <state relative-caret-position="154">
+          <caret line="59" column="33" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="33" />
           <folding />
         </state>
       </provider>

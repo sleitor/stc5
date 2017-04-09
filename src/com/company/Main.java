@@ -34,21 +34,21 @@ public class Main {
 
         long sim[] = new long[s];
         for (int i = 0; i < s; i++) {
-            sim[i] = (long)Math.round (1 +(Math.random () + Math.random ()+ Math.random () + Math.random ())*10 + Math.random ()*7+ Math.random ()*4);
+            sim[i] = Math.round (1 +(Math.random () + Math.random ()+ Math.random () + Math.random ())*10 + Math.random ()*7+ Math.random ()*4);
             Simple simple = new Simple(sim[i], "Simple-");
             simple.start();
         }
 
         long doub[] = new long[d];
         for (int i = 0; i < d; i++) {
-            doub[i] = (long)Math.round (1 + (Math.random () + Math.random ()+ Math.random () + Math.random ())*5 + Math.random ()*7+ Math.random ()*4 );
+            doub[i] = Math.round (1 + (Math.random () + Math.random ()+ Math.random () + Math.random ())*5 + Math.random ()*7+ Math.random ()*4 );
             Kvadro kvadro = new Kvadro(doub[i], "Double-");
             kvadro.start();
         }
 
         long kub[] = new long[k];
         for (int i = 0; i < k; i++) {
-            kub[i] = (long)Math.round (1 + (Math.random () + Math.random ()+ Math.random () + Math.random ())*5 + Math.random ()*7+ Math.random ()*4 );
+            kub[i] = Math.round (1 + (Math.random () + Math.random ()+ Math.random () + Math.random ())*5 + Math.random ()*7+ Math.random ()*4 );
             Kube kube = new Kube(kub[i], "Kube-");
             kube.start();
         }
