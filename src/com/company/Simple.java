@@ -2,14 +2,16 @@ package com.company;
 
 import sun.awt.windows.ThemeReader;
 
+import static com.company.Main.consumer;
+
 /**
  * Created by Троицкий Дмитрий on 07.04.2017.
  */
 public class Simple extends Thread {
-    int s;
+    long s;
     String name;
 
-    public Simple(int s, String s1) {
+    public Simple(long s, String s1) {
         this.s = s;
         this.name=s1;
     }
@@ -21,7 +23,19 @@ public class Simple extends Thread {
 */
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + name+ Thread.currentThread().getId() + " " + Consumer.sum(0,0,s) );
+
+        synchronized (Main.single) {
+
+            try {
+                Main.single.wait ();
+            } catch (InterruptedException e) {
+                e.printStackTrace ();
+            }
+        }
+        long result = s;
+
+        consumer.set(0,0,result); // Optimization
+        System.out.println("Поток: " + name + Thread.currentThread().getId() + " Число на входе: " + s + " результат вычисления: " + result );
     }
 }
 
