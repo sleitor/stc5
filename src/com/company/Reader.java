@@ -45,6 +45,7 @@ public class Reader extends Thread {
             System.out.println ("Системная ошибка. Надеюсь все впорядке.");
         }
         while (scanner.hasNext ()){
+            yield ();
             Counter.check (scanner.next ());
         }
 
