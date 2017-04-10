@@ -12,25 +12,24 @@ public class Counter {
     private static int sum = 0;
     private volatile static boolean stop = false;
 
-
-    public static boolean isStop() {
+    static boolean isStop() {
         return stop;
     }
 
-    static synchronized void count(String next) {
+    static void count(String next) {
 
         int value = 0;
 
 // разносим по разным методам проерку и подсчет.
         next = check(next);
+        checkStop(next);
+        if (next.length () == 0) return;
 
 // синхронайз здесь.
         synchronized(dictionary) {
 
-            next = checkStop(next);
-            if (next.length () == 0) return;
-
-            if ( dictionary.containsKey( next ) ) {
+           if (stop) return;
+           if ( dictionary.containsKey( next ) ) {
 
                 value = dictionary.get( next );
                 value++;
@@ -52,14 +51,12 @@ public class Counter {
         return next.replaceAll( "[\\d.,!?:/()_]+", "" );
     }
 
-    private static String checkStop(String next){
+    private static void checkStop(String next){
 
-        if (next.matches( "[a-zA-Z]+" ) && !Counter.isStop()) {
+        if (next.matches( "[a-zA-Z]+" ) ) {
 
-            synchronized(dictionary) {stop = true; }
-            System.out.println("Внимание поток " + Thread.currentThread().getName() + " нашел латиницу в слове: "+ next +" Стоп машина!!!!!! ");
-            return "";
-        } else return next;
-
+            stop = true;
+            System.out.println( "\n-------------------Внимание поток " + Thread.currentThread().getName() + " нашел латиницу в слове: \"" + next + "\". Стоп машина!!!!!! -------------------\n" );
+        }
     }
 }
