@@ -19,8 +19,16 @@ public class Reader extends Thread {
 
     @Override
     public void run () {
+        worker();
+
+    }
+
+    private void worker() {
 
         long time = System.currentTimeMillis ();
+        // вынести в отдельный метод
+
+        // проверку по дате.   или урлу
 
         try {
             scanner = new Scanner (this.resource.getData ());
@@ -38,18 +46,18 @@ public class Reader extends Thread {
         }
 
         System.out.println ( Thread.currentThread ().getName () + " Выбранный ресурс: file" + this.resource.getName () );
-
+/*
         try {
             Thread.sleep ( 1000 );
         } catch (InterruptedException e) {
             System.out.println ("Системная ошибка. Надеюсь все впорядке.");
         }
-        while (scanner.hasNext ()){
-            yield ();
-            Counter.check (scanner.next ());
+*/
+        while (scanner.hasNext ()&& !Counter.isStop()){
+            Counter.count(scanner.next ());
         }
 
-        System.out.println ("Время выполнения потока: " + (System.currentTimeMillis () - time));
+        System.out.println ("Время выполнения потока " + Thread.currentThread ().getName () + ": " + (System.currentTimeMillis () - time));
 
     }
 }

@@ -15,7 +15,6 @@ public class Resource {
     public Resource (String name, File data ) {
         this.name = name;
         this.data = data;
-
     }
 
     public Resource (String name, URL urldata ) {

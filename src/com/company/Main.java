@@ -32,9 +32,8 @@ public class Main {
 
             resource[i] = new Resource(i.toString () , new File("src\\com\\company\\Resources\\file" + i));
             reader[i] = new Reader (resource[i]);
-            reader[i].start ();
         }
-
+/*
         for (Integer i = 5; i < reader.length; i++) {
 
             try {
@@ -44,9 +43,13 @@ public class Main {
             }
 
             reader[i] = new Reader (resource[i-5]);
+        }
+/**/
+//        for (int i = 0; i < reader.length; i++) {
+        for (int i = 0; i < 4; i++) {
             reader[i].start ();
         }
-
+/*
         for (int i = 0; i < reader.length; i++) {
             try {
                 reader[i].join ();
@@ -56,7 +59,7 @@ public class Main {
                 System.out.println ("Ай-яй-яй. Ошибочка случилась");
             }
         }
-
+/**/
         System.out.println ("Время выполнения программы: " + (System.currentTimeMillis () - time));
 
     }
