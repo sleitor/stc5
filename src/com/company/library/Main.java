@@ -10,15 +10,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Book book = new Book( "Schildt","Intro to Java" , 2017,"1241241ada" );
-        book.print();
+//        Book book = new Book( "Schildt","Intro to Java" , 2017,"1241241ada" );
+//        book.print();
 
 	// write your code here
         Library library = new Library();
 
 
-//        DataManager.deserializeBook(library);
+//        DataManager.deserialize(library);
 
+
+        DataManager.deserializeBook(library);
+/*        DataManager.deserializeBook(library);
+        DataManager.deserializeBook(library);
+/*
         Reader john = new Reader("John", "Connor", "Androidovich", 12345678);
         Reader sara = new Reader("Sara", "Connor", "Human", 12345679);
 
@@ -33,7 +38,7 @@ public class Main {
 /**/
         library.showAllData();
 
-        FieldsToXML.BockToXML(library.getCatalog());
+//        FieldsToXML.BockToXML(library.getCatalog());
 //        DataManager.serializeToFile(library.getCatalog(), library.getReaders(), library.getBookings(), library.getStore());
 
 
