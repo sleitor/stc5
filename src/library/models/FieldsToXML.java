@@ -9,12 +9,15 @@ import org.w3c.dom.Node;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.FileWriter;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Set;
 
 /**
@@ -22,12 +25,15 @@ import java.util.Set;
  */
 public class FieldsToXML {
 
+    private static Book book;
+
     public static void BockToXML(Set<Book> catalog) {
 
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dbBuilder = dbFactory.newDocumentBuilder();
             Document doc = dbBuilder.newDocument();
+            Document doc2 = dbBuilder.newDocument();
 
             // root Element
             Element books = doc.createElement( "Books" );
@@ -41,28 +47,67 @@ public class FieldsToXML {
 
                 // Fields Element
                 Element fields = doc.createElement( "Fields" );
-                books.appendChild( fields );
+                bookEl.appendChild( fields );
 
 
                 for (Field field : book.getClass().getDeclaredFields()) {
 
-                    // field Element
-                    Element fieldEl = doc.createElement( field.getName() );
+                    field.setAccessible( true );
+                    Element fieldEl = doc.createElement( "field" );
                     fields.appendChild( fieldEl );
 
+                    fieldEl.setAttribute( "name",field.getName() );
                     fieldEl.setAttribute( "type",field.getType().getName() );
-
+                    fieldEl.setAttribute( "value",field.get(book).toString() );
+/*
                     fieldEl.appendChild(
-                    doc.createTextNode("value"));
+                        doc.createTextNode( field.get(book).toString() )
+                    );
+*/
                 }
+            }
+
+//            // root Element
+//            Element methhods = doc.createElement( "Methods" );
+//            doc.appendChild( methhods );
+
+            Element methods = doc.createElement( "Methods" );
+            books.appendChild( methods );
+
+            for (Method met : catalog.getClass().getMethods()) {
+
+                // Method Element
+                Element method = doc.createElement( "Method" );
+                methods.appendChild( method );
+
+//                    field.setAccessible( true );
+                Element metEl = doc.createElement( "field" );
+                method.appendChild( metEl );
+
+                metEl.setAttribute( "name",met.getName() );
+//                metEl.setAttribute( "type",met.getAnnotatedReturnType().toString() );
+//                    metEl.setAttribute( "value",field.get(book).toString() );
+/*
+                fieldEl.appendChild(
+                    doc.createTextNode( field.get(book).toString() )
+                );
+*/
+
+
+
             }
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
+
+            transformer.setOutputProperty( OutputKeys.INDENT, "yes");
             DOMSource source = new DOMSource( doc );
-            StreamResult result = new StreamResult( new File( "store.xml" ) );
+            StreamResult result = new StreamResult( new File( "catalog.xml" ) );
+            transformer.transform(source, result);
             StreamResult consoleResult = new StreamResult( System.out );
+
             transformer.transform( source, consoleResult );
+
         } catch(Exception e) {
             e.printStackTrace();
         }
