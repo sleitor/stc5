@@ -2,6 +2,7 @@ package com.company.library;
 
 import library.Library;
 import library.models.Book;
+import library.models.FieldsToXML;
 import library.models.Reader;
 import library.utils.DataManager;
 
@@ -32,6 +33,7 @@ public class Main {
 /**/
         library.showAllData();
 
+        FieldsToXML.BockToXML(library.getCatalog());
 //        DataManager.serializeToFile(library.getCatalog(), library.getReaders(), library.getBookings(), library.getStore());
 
 
