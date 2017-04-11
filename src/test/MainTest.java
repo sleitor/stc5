@@ -1,4 +1,4 @@
-package com.company.library;
+package test;
 
 import library.Library;
 import library.models.Book;

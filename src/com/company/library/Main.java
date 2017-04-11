@@ -8,6 +8,10 @@ import library.utils.DataManager;
 public class Main {
 
     public static void main(String[] args) {
+
+        Book book = new Book( "Schildt","Intro to Java" , 2017,"1241241ada" );
+        book.print();
+
 	// write your code here
         Library library = new Library();
 
