@@ -49,14 +49,17 @@ public class Library {
         Book newBook = new Book(author, title, year, isbn);
         catalog.add(newBook);
     }
+
     public void loadBookInstance(Book book, UUID number) {
         BookInstance newBookInstance = new BookInstance(book, number);
         store.add(newBookInstance);
     }
+
     public void loadReader(String firstName, String secondName, String lastName, long passportNumber) {
         Reader newReader = new Reader(firstName, secondName, lastName, passportNumber);
         readers.add(newReader);
     }
+ //
     public void loadbookings(BookInstance bookInstance, Reader reader, Date startDate, Date finishDate) {
         Booking newBooking = new Booking(bookInstance, reader, startDate, finishDate);
         bookings.add(newBooking);

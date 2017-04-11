@@ -19,5 +19,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="org.mockito:mockito-core:2.7.21" level="project" />
+    <orderEntry type="library" name="org.junit:junit5-api:5.0.0-ALPHA" level="project" />
   </component>
 </module>
