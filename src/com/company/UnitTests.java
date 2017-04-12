@@ -8,6 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Proxy;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -70,48 +71,94 @@ public class UnitTests {
     }
 
     @Test
-    public void workerTest() throws NoSuchFieldException {
-/*
-        ISInterface inputStream = (ISInterfaceImpl) Proxy.newProxyInstance(
-                ISInterfaceImpl.class.getClassLoader(),
-                ISInterface.class.getInterfaces(),
-                new WorkerProxy()
-        );
-
-        System.out.println(inputStream.toString());;
-*/
+    public void workerAndCounterTest() throws NoSuchFieldException {
+//
+//        ISInterface inputStream = (ISInterfaceImpl) Proxy.newProxyInstance(
+//                ISInterfaceImpl.class.getClassLoader(),
+//                ISInterface.class.getInterfaces(),
+//                new WorkerProxy()
+//        );
+//
+//        System.out.println(inputStream.toString());;
+//
 
         Iterator scanner = mock( Iterator.class );
-        when( scanner.next() ).thenReturn( "абракадабра" ).thenReturn( "World" );
-        when( scanner.hasNext() ).thenReturn( true ).thenReturn( true ).thenReturn( false );
+        when( scanner.next() ).thenReturn( "а-бракадабра" ).thenReturn( "абракадабра" ).thenReturn( "абракадабра" ).thenReturn( "World" );
+        when( scanner.hasNext() ).thenReturn( true ).thenReturn( true ).thenReturn( true ).thenReturn( true ).thenReturn( false );
 
         assertTrue( scanner.hasNext() );
 
         Counter.count( scanner.next().toString() );
         assertTrue( !Counter.isStop() );
-        Field sum = Counter.class.getDeclaredField("sum");
+        Field sum = Counter.class.getDeclaredField( "sum" );
         sum.setAccessible( true );
+        Field dictionary = Counter.class.getDeclaredField( "dictionary" );
+        dictionary.setAccessible( true );
+        try {
+            HashMap<String,Integer> dic  =(HashMap<String, Integer>) dictionary.get( null );
+            assertTrue( dic.containsKey("а-бракадабра") );
+            Integer dicval = dic.get("а-бракадабра");
+            assertEquals( (Integer) 1 ,dicval );
+        } catch(IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
         try {
-            assertTrue(  sum.get( null ).equals( 1 ) );
+            assertTrue( sum.get( null ).equals( 1 ) );
         } catch(IllegalAccessException e) {
             e.printStackTrace();
         }
 
         assertTrue( scanner.hasNext() );
 
-        Counter.count( scanner.next().toString() );
-        assertTrue( Counter.isStop() );
-/*        Field sum1 = Counter.class.getDeclaredField("sum");
-        sum.setAccessible( true );
-*/
+        Counter.count( scanner.next().toString() ); //абракадабра
+        assertTrue( !Counter.isStop() );
         try {
-            assertTrue(  sum.get( null ).equals( 1 ) );
+            HashMap<String,Integer> dic  =(HashMap<String, Integer>) dictionary.get( null );
+            assertTrue( dic.containsKey("абракадабра") );
+            Integer dicval = dic.get("абракадабра");
+            assertEquals( (Integer) 1 ,dicval );
+        } catch(IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        try {
+            assertTrue( sum.get( null ).equals( 2 ) );
         } catch(IllegalAccessException e) {
             e.printStackTrace();
         }
 
-        assertTrue( !scanner.hasNext() );
+        assertTrue( scanner.hasNext() );
+
+        Counter.count( scanner.next().toString() ); // абракадабра
+        assertTrue( !Counter.isStop() );
+        try {
+            HashMap<String,Integer> dic  =(HashMap<String, Integer>) dictionary.get( null );
+            assertTrue( dic.containsKey("абракадабра") );
+            Integer dicval = dic.get("абракадабра");
+            assertEquals( (Integer) 2 ,dicval );
+        } catch(IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            assertTrue( sum.get( null ).equals( 3 ) );
+        } catch(IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        assertTrue( scanner.hasNext() );
+
+        Counter.count( scanner.next().toString() ); //World
+        assertTrue( Counter.isStop() ); // остановка цикла проверки
+
+
+        try {
+            assertTrue( sum.get( null ).equals( 3 ) );
+        } catch(IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        assertTrue( !scanner.hasNext() ); // дошли до конца файла.
     }
     //        Reader reader = new Reader(  )
 }
