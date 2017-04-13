@@ -4,6 +4,7 @@ import library.Library;
 import library.models.Book;
 import library.models.FieldsToXML;
 import library.models.Reader;
+import library.utils.DataDaseManager;
 import library.utils.DataManager;
 
 public class Main {
@@ -17,10 +18,16 @@ public class Main {
         Library library = new Library();
 
 
+        DataDaseManager connect = new DataDaseManager();
+        connect.initConnection();
+
+//        connect.insert();
+        connect.select();
+
 //        DataManager.deserialize(library);
 
 
-        DataManager.deserializeBook(library);
+//        DataManager.deserializeBook(library);
 /*        DataManager.deserializeBook(library);
         DataManager.deserializeBook(library);
 /*
@@ -36,7 +43,7 @@ public class Main {
         library.returnBook("John", "Connor", "Androidovich", 12345678,
                 "Intro to Java");
 /**/
-        library.showAllData();
+ //       library.showAllData();
 
 //        FieldsToXML.BockToXML(library.getCatalog());
 //        DataManager.serializeToFile(library.getCatalog(), library.getReaders(), library.getBookings(), library.getStore());
