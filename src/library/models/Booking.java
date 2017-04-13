@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by sergey on 05.04.17.
+ * Created by Троицкий Дмитрий on 05.04.17.
  */
 public class Booking implements Serializable {
     private BookInstance bookInstance;
