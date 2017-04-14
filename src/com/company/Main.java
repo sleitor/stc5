@@ -9,17 +9,16 @@ import market.DataBaseConnector;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import static market.DataBaseConnector.*;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Connection db = DataBaseConnector.initConnection();
-        try {
-            System.out.println(db.isClosed());
-        } catch(SQLException e) {
-            e.printStackTrace();
-        }
+        Connection db = initConnection();
 
+        dropTable();
+        createTable();
 
         try {
             db.close();

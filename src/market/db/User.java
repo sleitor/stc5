@@ -14,7 +14,7 @@ public class User {
     private String firstName;
     private String secondName;
     private String thirdName;
-    private String adress;
+    private String address;
 
 
     public UUID getId() {
@@ -41,17 +41,17 @@ public class User {
         return thirdName;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public User( String userName, String email, String firstName, String secondName, String thirdName, String adress) {
+    public User( String userName, String email, String firstName, String secondName, String thirdName, String address) {
         this.id = id;
         this.userName = userName;
         this.email = email;
         this.firstName = firstName;
         this.secondName = secondName;
         this.thirdName = thirdName;
-        this.adress = adress;
+        this.address = address;
     }
 }
