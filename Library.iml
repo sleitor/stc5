@@ -19,5 +19,6 @@
     </orderEntry>
     <orderEntry type="library" name="postgresql-42.0.0" level="project" />
     <orderEntry type="library" name="org.junit:junit5-api:5.0.0-ALPHA" level="project" />
+    <orderEntry type="library" name="log4j:log4j:1.2.15" level="project" />
   </component>
 </module>

@@ -6,11 +6,19 @@ import library.models.FieldsToXML;
 import library.models.Reader;
 import library.utils.DataDaseManager;
 import library.utils.DataManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class Main {
 
-    public static void main(String[] args) {
+    private static final Logger logger = Logger.getLogger( Main.class );
 
+    static {
+ //       PropertyConfigurator.configure( "log4j.properties" );
+    }
+
+    public static void main(String[] args) {
+   //     logger.debug( "Hello, World!" );
 //        Book book = new Book( "Schildt","Intro to Java" , 2017,"1241241ada" );
 //        book.print();
 

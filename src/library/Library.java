@@ -1,6 +1,10 @@
 package library;
 
+import com.company.library.Main;
 import library.models.*;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
+
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -23,6 +27,12 @@ public class Library {
         return readers;
     }
 
+    private static final Logger LOGGER = Logger.getLogger( Library.class );
+
+    static {
+        DOMConfigurator.configure( "log4j.xml" );
+    }
+
     public Set<Booking> getBookings() {
         return bookings;
     }
@@ -33,6 +43,8 @@ public class Library {
         store = new HashSet<>(4096);
         readers = new HashSet<>(512);
         bookings = new HashSet<>(2048);
+
+        LOGGER.debug( "Hello, library!" );
     }
 
     public void buyBook(String title, String author, String isbn, int quantity, int year) {
