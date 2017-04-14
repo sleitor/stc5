@@ -1,7 +1,7 @@
 package com.company;
 
 /*
-Текст задачи
+Зделать Интернет магазин продуктов
 */
 
 public class Main {
