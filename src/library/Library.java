@@ -27,11 +27,11 @@ public class Library {
         return readers;
     }
 
-    private static final Logger LOGGER = Logger.getLogger( Library.class );
-
-    static {
-        DOMConfigurator.configure( "log4j.xml" );
-    }
+//    private static final Logger LOGGER = Logger.getLogger( Library.class );
+//
+//    static {
+//        DOMConfigurator.configure( "log4j.xml" );
+//    }
 
     public Set<Booking> getBookings() {
         return bookings;
@@ -44,7 +44,7 @@ public class Library {
         readers = new HashSet<>(512);
         bookings = new HashSet<>(2048);
 
-        LOGGER.debug( "Hello, library!" );
+ //       LOGGER.debug( "Hello, library!" );
     }
 
     public void buyBook(String title, String author, String isbn, int quantity, int year) {

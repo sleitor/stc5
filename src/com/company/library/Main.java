@@ -8,31 +8,41 @@ import library.utils.DataDaseManager;
 import library.utils.DataManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 
 public class Main {
 
-    private static final Logger logger = Logger.getLogger( Main.class );
-
-    static {
- //       PropertyConfigurator.configure( "log4j.properties" );
-    }
+////    private static final Logger logger = Logger.getLogger( Main.class );
+    //    static Logger logger = Logger.getLogger(CustomLog.class);
+    //
+    //
+    //    static {
+    //        DOMConfigurator.configure( "customlog.xml" );
+    // //       PropertyConfigurator.configure( "log4j.properties" );
+    // //       PropertyConfigurator.configure( "log4j.properties" );
+    //
+    //    }
 
     public static void main(String[] args) {
-   //     logger.debug( "Hello, World!" );
+//        logger.debug( "Hello, World!" );
 //        Book book = new Book( "Schildt","Intro to Java" , 2017,"1241241ada" );
 //        book.print();
 
 	// write your code here
         Library library = new Library();
 
+//        logger.info(1);
+//        logger.error(2);
 
-        DataDaseManager connect = new DataDaseManager();
-        connect.initConnection();
 
-//        connect.insert();
-        connect.select();
-
-//        DataManager.deserialize(library);
+//
+//        DataDaseManager connect = new DataDaseManager();
+//        connect.initConnection();
+//
+////        connect.insert();
+//        connect.select();
+//
+        DataManager.deserialize(library);
 
 
 //        DataManager.deserializeBook(library);
@@ -51,7 +61,7 @@ public class Main {
         library.returnBook("John", "Connor", "Androidovich", 12345678,
                 "Intro to Java");
 /**/
- //       library.showAllData();
+        library.showAllData();
 
 //        FieldsToXML.BockToXML(library.getCatalog());
 //        DataManager.serializeToFile(library.getCatalog(), library.getReaders(), library.getBookings(), library.getStore());
