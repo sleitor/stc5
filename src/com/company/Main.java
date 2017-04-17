@@ -35,6 +35,8 @@ public class Main {
 
                 try {
                     Socket socket = serverSocket.accept();
+ //                   Socket socket = new Socket( "localhost", 5555 );
+
                     BufferedReader bufferedReader = new BufferedReader(
                             new InputStreamReader( socket.getInputStream() )
                     );
@@ -46,13 +48,10 @@ public class Main {
                         }
                     }
 
-
                     //socket.close();
                 } catch(IOException e) {
                     e.printStackTrace();
                 }
-
-
             }
         }
         );
@@ -61,6 +60,7 @@ public class Main {
             @Override
             public void run() {
                 try {
+                    //start Timer
                     Socket socket = new Socket( "localhost", 5555 );
                     BufferedWriter bufferedWriter = new BufferedWriter(
                             new OutputStreamWriter( socket.getOutputStream() )
@@ -82,7 +82,7 @@ public class Main {
         } );
 
         Client.start();
-//        Server.start();
+        Server.start();
 
     }
 }

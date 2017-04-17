@@ -19,8 +19,13 @@ public class Client {
             public void run() {
 
                 try {
- //                   Socket socket = new Socket( "localhost", 5555 );
-                    Socket socket = Main.serverSocket.accept();
+
+
+                    //ServerSocket serverSocket = new ServerSocket( 5555 );
+//                    Socket socket = serverSocket.accept();
+
+                    Socket socket = new Socket( "localhost", 5555 );
+                    //Socket socket = Main.serverSocket.accept();
                     BufferedReader bufferedReader = new BufferedReader(
                             new InputStreamReader( socket.getInputStream() )
                     );
@@ -73,7 +78,7 @@ public class Client {
         } );
 
         Server2.start();
-//        Client2.start();
+        Client2.start();
 
     }
 
