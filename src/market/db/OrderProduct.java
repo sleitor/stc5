@@ -9,12 +9,12 @@ import java.util.UUID;
 public class OrderProduct {
 
     private UUID id;
-    private Set<Product> productSet;
+    private Product product;
     private int count;
     private float cost;
 
-    public OrderProduct(Set<Product> productSet, int count, float cost) {
-        this.productSet = productSet;
+    public OrderProduct(Product product, int count, float cost) {
+        this.product = product;
         this.count = count;
         this.cost = cost;
     }
