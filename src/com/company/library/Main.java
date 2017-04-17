@@ -43,23 +43,20 @@ public class Main {
 
 
 
-        ClassLoader classLoader = new MyClassLoader();
-     //   classLoader.
+        MyClassLoader classLoader = new MyClassLoader();
+        Class aClass = classLoader.loadClass("Tiket");
 //
+        System.out.println("aClass.getName() = " + aClass.getClassLoader());
 
+ //       aClass test = new aClass();
 
-        try {
-            Class aClass = classLoader.loadClass("");
-            System.out.println("aClass.getName() = " + aClass.getName());
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            aClass.getMethod( "test" );
+//        } catch(NoSuchMethodException e) {
+//            e.printStackTrace();
+//        }
 
-
-
-
-
-//
+        //
 //        DataDaseManager connect = new DataDaseManager();
 //        connect.initConnection();
 //

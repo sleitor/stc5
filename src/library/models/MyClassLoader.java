@@ -10,7 +10,7 @@ import java.util.jar.JarFile;
  * Created by Троицкий Дмитрий on 17.04.2017.
  */
 public class MyClassLoader extends ClassLoader {
-    private String jarFile = "tiket.jar"; //Path to the jar file
+    private String jarFile = "C:\\Users\\admin\\Desktop\\stc5\\src\\tiketn.jar"; //Path to the jar file
     private Hashtable classes = new Hashtable(); //used to cache already defined classes
 
     public MyClassLoader() {
