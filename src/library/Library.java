@@ -2,9 +2,6 @@ package library;
 
 import com.company.library.Main;
 import library.models.*;
-import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
-
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;

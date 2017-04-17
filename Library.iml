@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="JUnit5">
         <CLASSES>
           <root url="jar://$APPLICATION_HOME_DIR$/plugins/junit/lib/junit-jupiter-api-5.0.0-M3.jar!/" />
@@ -17,8 +17,9 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="postgresql-42.0.0" level="project" />
-    <orderEntry type="library" name="org.junit:junit5-api:5.0.0-ALPHA" level="project" />
-    <orderEntry type="library" name="log4j:log4j:1.2.15" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="postgresql-42.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="org.junit:junit5-api:5.0.0-ALPHA" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="log4j:log4j:1.2.15" level="project" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>

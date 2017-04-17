@@ -3,14 +3,19 @@ package com.company.library;
 import library.Library;
 import library.models.Book;
 import library.models.FieldsToXML;
+import library.models.MyClassLoader;
 import library.models.Reader;
 import library.utils.DataDaseManager;
 import library.utils.DataManager;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.apache.log4j.xml.DOMConfigurator;
+//import org.apache.log4j.Logger;
+//import org.apache.log4j.PropertyConfigurator;
+//import org.apache.log4j.xml.DOMConfigurator;
 
 public class Main {
+
+
+
+
 
 ////    private static final Logger logger = Logger.getLogger( Main.class );
     //    static Logger logger = Logger.getLogger(CustomLog.class);
@@ -33,6 +38,25 @@ public class Main {
 
 //        logger.info(1);
 //        logger.error(2);
+//
+
+
+
+
+        ClassLoader classLoader = new MyClassLoader();
+     //   classLoader.
+//
+
+
+        try {
+            Class aClass = classLoader.loadClass("");
+            System.out.println("aClass.getName() = " + aClass.getName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+
 
 
 //
@@ -42,7 +66,7 @@ public class Main {
 ////        connect.insert();
 //        connect.select();
 //
-        DataManager.deserialize(library);
+ //       DataManager.deserialize(library);
 
 
 //        DataManager.deserializeBook(library);
