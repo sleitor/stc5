@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 rel. 3 (x64) (http://www.altova.com) by Dmitriy (Home) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="reader" type="ReaderType">
+		<xs:annotation>
+			<xs:documentation>Book from Store</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="ReaderType">
+		<xs:attribute name="firstName" type="xs:string" use="required"/>
+		<xs:attribute name="secondName" type="xs:string" use="required"/>
+		<xs:attribute name="yearlastName" type="xs:string" use="required"/>
+		<xs:attribute name="passportNumber" type="xs:long" use="required"/>
+	</xs:complexType>
+</xs:schema>
