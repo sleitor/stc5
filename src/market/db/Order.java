@@ -9,7 +9,7 @@ import java.util.UUID;
  */
 public class Order {
 
-    private UUID id;
+    private UUID uuid;
     private User user;
     private Date date;
     private Set<OrderProduct> orderProductSet;

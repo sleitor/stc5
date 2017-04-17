@@ -8,12 +8,13 @@ import java.util.UUID;
  */
 public class OrderProduct {
 
-    private UUID id;
+    private UUID uuid;
     private Product product;
     private int count;
     private float cost;
 
-    public OrderProduct(Product product, int count, float cost) {
+    public OrderProduct(UUID uuid, Product product, int count, float cost) {
+        this.uuid = uuid;
         this.product = product;
         this.count = count;
         this.cost = cost;

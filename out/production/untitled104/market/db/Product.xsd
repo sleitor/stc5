@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="product" type="ProductType">
+	</xs:element>
+	<xs:complexType name="ProductType">
+		<xs:sequence>
+			<xs:element name="uuid" type="xs:string"/>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="description" type="xs:string"/>
+			<xs:element name="quantity" type="xs:float"/>
+			<xs:element name="cost" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

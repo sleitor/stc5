@@ -7,13 +7,19 @@ import java.util.UUID;
  */
 public class Product {
 
-    private UUID id;
+    private UUID uuid;
     private String name;
     private String description;
     private int quantity;
+    private int cost;
+
+    public int getCost() {
+        return cost;
+    }
+
 
     public UUID getId() {
-        return id;
+        return uuid;
     }
 
     public String getName() {
@@ -28,11 +34,19 @@ public class Product {
         return quantity;
     }
 
-    public Product(String name, String description, int quantity) {
-        this.id = id;
+    public Product(UUID uuid, String name, String description, int quantity, int cost) {
+        this.uuid = uuid;
         this.name = name;
         this.description = description;
         this.quantity = quantity;
+        this.cost = cost;
     }
+
+    //    public Product(String name, String description, int quantity) {
+//        this.id = id;
+//        this.name = name;
+//        this.description = description;
+//        this.quantity = quantity;
+//    }
 
 }

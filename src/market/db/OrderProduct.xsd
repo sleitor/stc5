@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:include schemaLocation="Product.xsd"></xs:include>
+	<xs:element name="orderProduct" type="OrderProductType">
+	</xs:element>
+	<xs:complexType name="OrderProductType">
+		<xs:sequence>
+			<xs:element name="uuid" type="xs:string"/>
+			<xs:element name="product" type="ProductType"/>
+			<xs:element name="count" type="xs:int"/>
+			<xs:element name="cost" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

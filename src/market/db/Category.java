@@ -8,7 +8,7 @@ import java.util.UUID;
  */
 public class Category {
 
-    private UUID id;
+    private UUID uuid;
     private String name;
     private Set<Product> products;
 

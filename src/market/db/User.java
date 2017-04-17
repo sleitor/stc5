@@ -8,18 +8,13 @@ import java.util.UUID;
 
 public class User {
 
-    private UUID id;
+    private UUID uuid;
     private String userName;
     private String email;
     private String firstName;
     private String secondName;
-    private String thirdName;
+    private String lastName;
     private String address;
-
-
-    public UUID getId() {
-        return id;
-    }
 
     public String getUserName() {
         return userName;
@@ -38,20 +33,30 @@ public class User {
     }
 
     public String getThirdName() {
-        return thirdName;
+        return lastName;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public User( String userName, String email, String firstName, String secondName, String thirdName, String address) {
-        this.id = id;
+    public User(UUID uuid, String userName, String email, String firstName, String secondName, String thirdName, String address) {
+        this.uuid = uuid;
         this.userName = userName;
         this.email = email;
         this.firstName = firstName;
         this.secondName = secondName;
-        this.thirdName = thirdName;
+        this.lastName = thirdName;
         this.address = address;
     }
+
+    //    public User( String userName, String email, String firstName, String secondName, String thirdName, String address) {
+//        this.id = id;
+//        this.userName = userName;
+//        this.email = email;
+//        this.firstName = firstName;
+//        this.secondName = secondName;
+//        this.thirdName = thirdName;
+//        this.address = address;
+//    }
 }
