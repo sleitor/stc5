@@ -1,6 +1,8 @@
 package market.converter;
 
 import market.DataBaseConnector;
+import market.importer.OrderProductType;
+import market.importer.OrderType;
 import market.importer.ProductType;
 import market.importer.UserType;
 
@@ -15,103 +17,109 @@ import javax.xml.bind.Marshaller;
 /**
  * Created by Троицкий Дмитрий on 17.04.2017.
  */
-public  class Object2XML {
+public class Object2XML {
 
     public static void user2XML() {
-        UserType customer = new UserType();
-        customer.setUuid( UUID.randomUUID().toString() );
-        customer.setUserName( "mkyong" );
-        customer.setEmail( "email" );
-        customer.setFirstName( "firstName" );
-        customer.setSecondName( "secondName" );
-        customer.setLastName( "lastName" );
-        customer.setAddress( "address" );
 
-        try {
-            File file = new File( "dump/UserType.xml" );
-            JAXBContext jaxbContext = JAXBContext.newInstance( UserType.class );
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+        ArrayList<UserType> users = DataBaseConnector.getUsers();
 
-            // output pretty printed
-            jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+        if ( users.size() > 0 ) {
 
-            jaxbMarshaller.marshal( customer, file );
-            jaxbMarshaller.marshal( customer, System.out );
+            try {
+                File file = new File( "dump/UserType.xml" );
+                JAXBContext jaxbContext = JAXBContext.newInstance( UserType.class );
+                Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-        } catch(JAXBException e) {
-            e.printStackTrace();
+                for (UserType user : users) {
+                    // output pretty printed
+                    jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+
+                    jaxbMarshaller.marshal( user, file );
+                    jaxbMarshaller.marshal( user, System.out );
+                }
+
+            } catch(JAXBException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 
     public static void product2XML() {
 
-        ArrayList<ProductType> product = DataBaseConnector.getProducts();
+        ArrayList<ProductType> products = DataBaseConnector.getProducts();
 
-        try {
-            File file = new File( "dump/UserType.xml" );
-            JAXBContext jaxbContext = JAXBContext.newInstance( UserType.class );
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+        if ( products.size() > 0 ) {
 
-            // output pretty printed
-            jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+            try {
+                File file = new File( "dump/ProductType.xml" );
+                JAXBContext jaxbContext = JAXBContext.newInstance( ProductType.class );
+                Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-            jaxbMarshaller.marshal( product, file );
-            jaxbMarshaller.marshal( product, System.out );
+                for (ProductType product : products) {
+                    // output pretty printed
+                    jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
 
-        } catch(JAXBException e) {
-            e.printStackTrace();
+                    jaxbMarshaller.marshal( product, file );
+                    jaxbMarshaller.marshal( product, System.out );
+                }
+
+            } catch(JAXBException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 
     public static void order2XML() {
-        UserType customer = new UserType();
-        customer.setUuid( UUID.randomUUID().toString() );
-        customer.setUserName( "mkyong" );
-        customer.setEmail( "email" );
-        customer.setFirstName( "firstName" );
-        customer.setSecondName( "secondName" );
-        customer.setLastName( "lastName" );
-        customer.setAddress( "address" );
 
-        try {
-            File file = new File( "dump/UserType.xml" );
-            JAXBContext jaxbContext = JAXBContext.newInstance( UserType.class );
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+        ArrayList<OrderType> orders = DataBaseConnector.getOrders();
 
-            // output pretty printed
-            jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+        if ( orders.size() > 0 ) {
 
-            jaxbMarshaller.marshal( customer, file );
-            jaxbMarshaller.marshal( customer, System.out );
+            try {
+                File file = new File( "dump/ProductType.xml" );
+                JAXBContext jaxbContext = JAXBContext.newInstance( OrderType.class );
+                Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-        } catch(JAXBException e) {
-            e.printStackTrace();
+                for (OrderType order : orders) {
+                    // output pretty printed
+                    jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+
+                    jaxbMarshaller.marshal( order, file );
+                    jaxbMarshaller.marshal( order, System.out );
+                }
+
+            } catch(JAXBException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 
-    public static void orderInstance2XML() {
-        UserType customer = new UserType();
-        customer.setUuid( UUID.randomUUID().toString() );
-        customer.setUserName( "mkyong" );
-        customer.setEmail( "email" );
-        customer.setFirstName( "firstName" );
-        customer.setSecondName( "secondName" );
-        customer.setLastName( "lastName" );
-        customer.setAddress( "address" );
+    public static void orderProduct2XML() {
 
-        try {
-            File file = new File( "dump/UserType.xml" );
-            JAXBContext jaxbContext = JAXBContext.newInstance( UserType.class );
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+        ArrayList<OrderProductType> orderProducts = DataBaseConnector.getOrderProducts();
 
-            // output pretty printed
-            jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+        if ( orderProducts.size() > 0 ) {
 
-            jaxbMarshaller.marshal( customer, file );
-            jaxbMarshaller.marshal( customer, System.out );
+            try {
+                File file = new File( "dump/ProductType.xml" );
+                JAXBContext jaxbContext = JAXBContext.newInstance( OrderType.class );
+                Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-        } catch(JAXBException e) {
-            e.printStackTrace();
+                for (OrderProductType orderProduct : orderProducts) {
+                    // output pretty printed
+                    jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
+
+                    jaxbMarshaller.marshal( orderProduct, file );
+                    jaxbMarshaller.marshal( orderProduct, System.out );
+                }
+
+            } catch(JAXBException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 }

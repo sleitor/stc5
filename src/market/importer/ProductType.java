@@ -55,7 +55,7 @@ public class ProductType {
     @XmlElement(required = true)
     protected String description;
     @XmlElement(required = true)
-    protected float quantity;
+    protected int quantity;
     @XmlElement(required = true)
     protected float cost;
 
@@ -143,7 +143,7 @@ public class ProductType {
      * Sets the value of the quantity property.
      * 
      */
-    public void setQuantity(float value) {
+    public void setQuantity(int value) {
         this.quantity = value;
     }
 

@@ -24,9 +24,11 @@ public class Main {
 
         Object2XML.product2XML();
 
-        UserType customer = XML2Object.XML2Object();
+        Object2XML.user2XML();
 
-        System.out.println(customer.getAddress());
+//        UserType customer = XML2Object.XML2Object();
+
+//        System.out.println(customer.getAddress());
 
 
 
@@ -35,13 +37,6 @@ public class Main {
 
         dropTable();
         createTable();
-*/
-/*
-        try {
-            db.close();
-        } catch(SQLException e) {
-            e.printStackTrace();
-        }
 */
     }
 
