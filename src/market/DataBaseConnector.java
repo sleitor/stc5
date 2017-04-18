@@ -1,10 +1,12 @@
 package market;
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import market.db.Product;
+import market.importer.ProductType;
+
+import java.lang.reflect.Proxy;
+import java.sql.*;
+import java.util.*;
 
 /**
  * Created by Троицкий Дмитрий on 14.04.2017.
@@ -57,6 +59,34 @@ public class DataBaseConnector  {
         } catch(SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static  ArrayList<ProductType> getProducts(){
+
+        Connection db = initConnection();
+        try {
+            Statement statement = db.createStatement();
+            ResultSet resultSet =statement.executeQuery( "SELECT * FROM products" );
+
+            ArrayList<ProductType> data = new ArrayList<>();
+
+            while (resultSet.next()){
+                ProductType product = new ProductType();
+                product.setUuid( resultSet.getString( 1 ) );
+                product.setName( resultSet.getString( 2 ) );
+                product.setDescription( resultSet.getString( 3 ) );
+                product.setQuantity( resultSet.getInt( 4 ) );
+                product.setCost( resultSet.getInt( 5 ) );
+                data.add( product );
+            }
+            return data;
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return null;
     }
 
 

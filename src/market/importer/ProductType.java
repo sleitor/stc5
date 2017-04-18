@@ -8,10 +8,7 @@
 
 package market.importer;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -45,6 +42,10 @@ import javax.xml.bind.annotation.XmlType;
     "quantity",
     "cost"
 })
+
+@XmlRootElement
+
+
 public class ProductType {
 
     @XmlElement(required = true)
@@ -53,7 +54,9 @@ public class ProductType {
     protected String name;
     @XmlElement(required = true)
     protected String description;
+    @XmlElement(required = true)
     protected float quantity;
+    @XmlElement(required = true)
     protected float cost;
 
     /**
