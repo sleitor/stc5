@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42398c1f-d69d-4b28-ba71-1713f7bee44b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/order/OrderType0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/orderProduct/OrderProductType0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/product/ProductType0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dump/ProductType.xml" afterPath="$PROJECT_DIR$/dump/product/ProductType1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dump/UserType.xml" afterPath="$PROJECT_DIR$/dump/user/UserType0.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dump/order/OrderType0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dump/orderProduct/OrderProductType0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dump/product/ProductType0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dump/product/ProductType1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dump/user/UserType0.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/DataBaseConnector.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/DataBaseConnector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/converter/Object2XML.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/converter/Object2XML.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/converter/XML2Object.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/converter/XML2Object.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/importer/OrderProductType.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/importer/OrderProductType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/importer/OrderType.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/importer/OrderType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/DataBaseConnector.java" afterPath="$PROJECT_DIR$/src/market/DataBaseConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/converter/Object2XML.java" afterPath="$PROJECT_DIR$/src/market/converter/Object2XML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/converter/XML2Object.java" afterPath="$PROJECT_DIR$/src/market/converter/XML2Object.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/importer/OrderProductType.java" afterPath="$PROJECT_DIR$/src/market/importer/OrderProductType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/importer/OrderType.java" afterPath="$PROJECT_DIR$/src/market/importer/OrderType.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="2" lean-forward="false" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+            <state relative-caret-position="352">
+              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataBaseConnector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataBaseConnector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/market/DataBaseConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="290" column="3" lean-forward="false" selection-start-line="290" selection-start-column="3" selection-end-line="290" selection-end-column="3" />
+            <state relative-caret-position="988">
+              <caret line="353" column="0" lean-forward="false" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initConnection#0;class#DataBaseConnector#0" expanded="false" />
@@ -82,33 +76,35 @@
                 <element signature="method#getUsers#0;class#DataBaseConnector#0" expanded="false" />
                 <element signature="method#getOrders#0;class#DataBaseConnector#0" expanded="false" />
                 <element signature="method#getOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#setOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-                <marker date="1492617545006" expanded="true" signature="1643:1825" ph="CREATE TABLE... users" />
-                <marker date="1492617545006" expanded="true" signature="1863:2000" ph="CREATE TABLE... products" />
-                <marker date="1492617545006" expanded="true" signature="2284:2549" ph="CREATE TABLE... orderProducts" />
-                <marker date="1492617545006" expanded="true" signature="2550:2569" ph="UPDATE NO AC... " />
-                <marker date="1492617545006" expanded="true" signature="2570:2725" ph="DELETE NO AC... " />
-                <marker date="1492617545006" expanded="true" signature="2997:3046" ph="DROP TABLE o... " />
-                <marker date="1492617545006" expanded="true" signature="3364:3386" ph="SELECT * FRO... products" />
-                <marker date="1492617545006" expanded="true" signature="4269:4283" ph="SELECT * FRO... USERS" />
-                <marker date="1492617545006" expanded="true" signature="4269:4288" ph="SELECT * FRO... users" />
-                <marker date="1492617545006" expanded="true" signature="5280:5300" ph="SELECT * FRO... orders" />
-                <marker date="1492617545006" expanded="true" signature="6495:6522" ph="SELECT * FRO... orderPtoducts" />
-                <marker date="1492617545006" expanded="true" signature="8661:8742" ph="INSERT INTO products... " />
-                <marker date="1492617545006" expanded="true" signature="9484:9590" ph="INSERT INTO products... " />
-                <marker date="1492617545006" expanded="true" signature="10441:10505" ph="INSERT INTO order... " />
-                <marker date="1492617545006" expanded="true" signature="11199:11226" ph="SELECT * FRO... orderProducts" />
+                <marker date="1492622281240" expanded="true" signature="1643:1825" ph="CREATE TABLE... users" />
+                <marker date="1492622281240" expanded="true" signature="1863:2000" ph="CREATE TABLE... products" />
+                <marker date="1492622281240" expanded="true" signature="2284:2549" ph="CREATE TABLE... orderProducts" />
+                <marker date="1492622281240" expanded="true" signature="2550:2569" ph="UPDATE NO AC... " />
+                <marker date="1492622281240" expanded="true" signature="2570:2725" ph="DELETE NO AC... " />
+                <marker date="1492622281240" expanded="true" signature="2997:3046" ph="DROP TABLE o... " />
+                <marker date="1492622281240" expanded="true" signature="3364:3386" ph="SELECT * FRO... products" />
+                <marker date="1492622281240" expanded="true" signature="4269:4283" ph="SELECT * FRO... USERS" />
+                <marker date="1492622281240" expanded="true" signature="4269:4288" ph="SELECT * FRO... users" />
+                <marker date="1492622281240" expanded="true" signature="5280:5300" ph="SELECT * FRO... orders" />
+                <marker date="1492622281240" expanded="true" signature="6495:6522" ph="SELECT * FRO... orderPtoducts" />
+                <marker date="1492622281240" expanded="true" signature="8661:8742" ph="INSERT INTO products... " />
+                <marker date="1492622281240" expanded="true" signature="9464:9570" ph="INSERT INTO products... " />
+                <marker date="1492622281240" expanded="true" signature="10401:10466" ph="INSERT INTO order... " />
+                <marker date="1492622281240" expanded="true" signature="11455:11545" ph="INSERT INTO order... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductType1.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dump/product/ProductType1.xml">
+      <file leaf-file-name="OrderProductType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/market/importer/OrderProductType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="266">
+              <caret line="148" column="12" lean-forward="true" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
+              <folding>
+                <element signature="e#3366#3367#0" expanded="true" />
+                <element signature="e#3394#3395#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,17 +153,18 @@
         <option value="$PROJECT_DIR$/src/market/importer/ProductType.java" />
         <option value="$PROJECT_DIR$/dump/ProductType.xml" />
         <option value="$PROJECT_DIR$/src/market/converter/XML2Object.java" />
-        <option value="$PROJECT_DIR$/src/market/importer/OrderProductType.java" />
         <option value="$PROJECT_DIR$/src/market/converter/Object2XML.java" />
         <option value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.41.jar!/com/mysql/jdbc/ResultSetImpl.class" />
         <option value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.41.jar!/com/mysql/fabric/jdbc/FabricMySQLDriver.class" />
-        <option value="$PROJECT_DIR$/dump/order/OrderType0.xml" />
         <option value="$PROJECT_DIR$/src/market/importer/OrderType.java" />
         <option value="$PROJECT_DIR$/dump/product/ProductType0.xml" />
         <option value="$PROJECT_DIR$/dump/product/ProductType1.xml" />
         <option value="$PROJECT_DIR$/dump/user/UserType0.xml" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/market/importer/OrderProductType.java" />
+        <option value="$PROJECT_DIR$/dump/order/OrderType0.xml" />
+        <option value="$PROJECT_DIR$/dump/orderProduct/OrderProductType0.xml" />
         <option value="$PROJECT_DIR$/src/market/DataBaseConnector.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
@@ -286,64 +283,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dump" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dump" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dump" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orderProduct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dump" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="order" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -781,12 +720,12 @@
       <workItem from="1491469792117" duration="4118000" />
       <workItem from="1491476706453" duration="70000" />
       <workItem from="1492314124025" duration="18889000" />
-      <workItem from="1492599316225" duration="17776000" />
+      <workItem from="1492599316225" duration="23071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66230000" />
+    <option name="totallyTimeSpent" value="71525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -801,7 +740,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3251634" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28104576" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -831,9 +770,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/market/DataBaseConnector.java</url>
+          <line>285</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="16" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="x" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1063,14 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dump/orderProduct/OrderProductType0.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.41.jar!/com/mysql/jdbc/ResultSetImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -1092,9 +1041,9 @@
         <state relative-caret-position="308">
           <caret line="131" column="44" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3188#3189#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3155#3156#0" expanded="false" />
+            <element signature="e#3188#3189#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1112,19 +1061,8 @@
         <state relative-caret-position="128">
           <caret line="1768" column="32" lean-forward="false" selection-start-line="1768" selection-start-column="32" selection-end-line="1768" selection-end-column="32" />
           <folding>
-            <element signature="e#71057#71058#0" expanded="true" />
-            <element signature="e#71104#71105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/importer/OrderProductType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <caret line="50" column="18" lean-forward="true" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding>
-            <element signature="e#3300#3301#0" expanded="true" />
-            <element signature="e#3334#3335#0" expanded="true" />
+            <element signature="e#71057#71058#0" expanded="false" />
+            <element signature="e#71104#71105#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1134,48 +1072,6 @@
         <state relative-caret-position="170">
           <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dump/order/OrderType0.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dump/product/ProductType1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dump/user/UserType0.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dump/product/ProductType0.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="2" lean-forward="false" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1201,8 +1097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/market/DataBaseConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="290" column="3" lean-forward="false" selection-start-line="290" selection-start-column="3" selection-end-line="290" selection-end-column="3" />
+        <state relative-caret-position="988">
+          <caret line="353" column="0" lean-forward="false" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initConnection#0;class#DataBaseConnector#0" expanded="false" />
@@ -1212,22 +1108,82 @@
             <element signature="method#getUsers#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#getOrders#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#getOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-            <element signature="method#setOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-            <marker date="1492617545006" expanded="true" signature="1643:1825" ph="CREATE TABLE... users" />
-            <marker date="1492617545006" expanded="true" signature="1863:2000" ph="CREATE TABLE... products" />
-            <marker date="1492617545006" expanded="true" signature="2284:2549" ph="CREATE TABLE... orderProducts" />
-            <marker date="1492617545006" expanded="true" signature="2550:2569" ph="UPDATE NO AC... " />
-            <marker date="1492617545006" expanded="true" signature="2570:2725" ph="DELETE NO AC... " />
-            <marker date="1492617545006" expanded="true" signature="2997:3046" ph="DROP TABLE o... " />
-            <marker date="1492617545006" expanded="true" signature="3364:3386" ph="SELECT * FRO... products" />
-            <marker date="1492617545006" expanded="true" signature="4269:4283" ph="SELECT * FRO... USERS" />
-            <marker date="1492617545006" expanded="true" signature="4269:4288" ph="SELECT * FRO... users" />
-            <marker date="1492617545006" expanded="true" signature="5280:5300" ph="SELECT * FRO... orders" />
-            <marker date="1492617545006" expanded="true" signature="6495:6522" ph="SELECT * FRO... orderPtoducts" />
-            <marker date="1492617545006" expanded="true" signature="8661:8742" ph="INSERT INTO products... " />
-            <marker date="1492617545006" expanded="true" signature="9484:9590" ph="INSERT INTO products... " />
-            <marker date="1492617545006" expanded="true" signature="10441:10505" ph="INSERT INTO order... " />
-            <marker date="1492617545006" expanded="true" signature="11199:11226" ph="SELECT * FRO... orderProducts" />
+            <marker date="1492622281240" expanded="true" signature="1643:1825" ph="CREATE TABLE... users" />
+            <marker date="1492622281240" expanded="true" signature="1863:2000" ph="CREATE TABLE... products" />
+            <marker date="1492622281240" expanded="true" signature="2284:2549" ph="CREATE TABLE... orderProducts" />
+            <marker date="1492622281240" expanded="true" signature="2550:2569" ph="UPDATE NO AC... " />
+            <marker date="1492622281240" expanded="true" signature="2570:2725" ph="DELETE NO AC... " />
+            <marker date="1492622281240" expanded="true" signature="2997:3046" ph="DROP TABLE o... " />
+            <marker date="1492622281240" expanded="true" signature="3364:3386" ph="SELECT * FRO... products" />
+            <marker date="1492622281240" expanded="true" signature="4269:4283" ph="SELECT * FRO... USERS" />
+            <marker date="1492622281240" expanded="true" signature="4269:4288" ph="SELECT * FRO... users" />
+            <marker date="1492622281240" expanded="true" signature="5280:5300" ph="SELECT * FRO... orders" />
+            <marker date="1492622281240" expanded="true" signature="6495:6522" ph="SELECT * FRO... orderPtoducts" />
+            <marker date="1492622281240" expanded="true" signature="8661:8742" ph="INSERT INTO products... " />
+            <marker date="1492622281240" expanded="true" signature="9464:9570" ph="INSERT INTO products... " />
+            <marker date="1492622281240" expanded="true" signature="10401:10466" ph="INSERT INTO order... " />
+            <marker date="1492622281240" expanded="true" signature="11455:11545" ph="INSERT INTO order... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/order/OrderType0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/orderProduct/OrderProductType0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/product/ProductType0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/product/ProductType1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/user/UserType0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/importer/OrderProductType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="148" column="12" lean-forward="true" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
+          <folding>
+            <element signature="e#3366#3367#0" expanded="true" />
+            <element signature="e#3394#3395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -144,4 +144,8 @@ public class OrderProductType {
     public void setOrder(String order) {
         this.order = order;
     }
+
+    public String getOrder() {
+        return order;
+    }
 }

@@ -255,8 +255,7 @@ public class DataBaseConnector {
         Connection db = initConnection();
 
         try {
-            PreparedStatement statement = db.prepareStatement(
-                    "INSERT INTO users (uuid, userName, email, firstName, secondName, lastName, address) VALUES (?,?,?,?,?,?,?)" );
+            PreparedStatement statement = db.prepareStatement( "INSERT INTO users (uuid, userName, email, firstName, secondName, lastName, address) VALUES (?,?,?,?,?,?,?)" );
 
             for (UserType user : users) {
                 statement.setString( 1, user.getUuid() );
@@ -282,13 +281,21 @@ public class DataBaseConnector {
         Connection db = initConnection();
 
         try {
-            PreparedStatement statement = db.prepareStatement(
-                    "INSERT INTO order (uuid, uuid_user, date, cost) VALUES (?,?,?,?)" );
+            PreparedStatement statement = db.prepareStatement( "INSERT INTO orders (uuid, uuid_user, date, cost) VALUES (?,?,?,?)" );
 
             for (OrderType order : orders) {
                 statement.setString( 1, order.getUuid() );
                 statement.setString( 2, order.getUser() );
- //               statement.setDate( 3, order.getDate() );
+
+                java.sql.Date sqlDate;
+
+                if (order.getDate() == null) {
+                    sqlDate = new java.sql.Date((new java.util.Date()).getTime());
+                } else {
+                    sqlDate = new java.sql.Date(order.getDate().toGregorianCalendar().getTimeInMillis());
+                }
+                statement.setDate(3, sqlDate);
+
                 statement.setFloat( 4, order.getCost() );
                 statement.executeUpdate();
             }
@@ -300,56 +307,47 @@ public class DataBaseConnector {
         }
     }
 
-    public static ArrayList<OrderProductType> setOrderProducts() {
+    public static void setOrderProducts(ArrayList<OrderProductType> orderProducts) {
 
         Connection db = initConnection();
 
         try {
+            PreparedStatement statement = db.prepareStatement(
+                    "INSERT INTO orderProducts (uuid, uuid_order, uuid_product, count, cost) VALUES (?,?,?,?,?)" );
 
-            Statement statement = db.createStatement();
-            ResultSet resultSet = statement.executeQuery( "SELECT * FROM orderProducts" );
-
-            ArrayList<OrderProductType> data = new ArrayList<>();
-
-            while (resultSet.next()) {
-
-                OrderProductType order = new OrderProductType();
-                order.setUuid( resultSet.getString( 1 ) );
-                //                order.setUuidProduct( resultSet.getString( 2 ) );
-                order.setOrder( resultSet.getString( 2 ) );
-                order.setProduct( resultSet.getString( 3 ) );
-                order.setCount( resultSet.getInt( 4 ) );
-                order.setCost( resultSet.getFloat( 5 ) );
-                data.add( order );
+            for (OrderProductType orderProduct : orderProducts) {
+                statement.setString( 1, orderProduct.getUuid() );
+                statement.setString( 2, orderProduct.getOrder() );
+                statement.setString( 3, orderProduct.getProduct() );
+                statement.setInt( 4, orderProduct.getCount() );
+                statement.setFloat( 5, orderProduct.getCost() );
+                statement.executeUpdate();
             }
-            return data;
+
+            db.close();
 
         } catch(SQLException e) {
             e.printStackTrace();
         }
 
-
-        //
-        //        INSERT INTO `users` (`uuid`, `userName`, `email`, `firstName`, `secondName`, `lastName`, `address`) VALUES
-        //                ('a0aafa4b-2447-11e7-9260-4663796b7078', 'vasya', 'vasya@yandex.ru', 'Василий', 'Петрович', 'Исаков', 'ввв ленингад эксбб точка ру');
-        //
-        //
-        //        INSERT INTO `products` (`uuid`, `name`, `description`, `quantity`, `cost`) VALUES
-        //                ('4fb9a0da-2444-11e7-9260-4663796b7078', 'Хлеб', 'Вкусненький, свеженький хлебушек', 50, 35),
-        //                ('b2ccd701-23ec-11e7-9260-4663796b7078', 'Молоко', 'Вкусное, свежее молочко', 25, 80);
-        //
-        //        INSERT INTO `orders`(`uuid`, `uuid_user`, `date`, `cost`) VALUES
-        //                ('5b54e942-2502-11e7-9260-4663796b7078','a0aafa4b-2447-11e7-9260-4663796b7078',2017-03-19,80);
-        //
-        //        INSERT INTO  `orderProducts` (  `uuid` ,  `uuid_order` ,  `uuid_product` ,  `count` ,  `cost` )
-        //        VALUES (
-        //                '688ac6a7-24f7-11e7-9260-4663796b7078',  '5b54e942-2502-11e7-9260-4663796b7078',  'b2ccd701-23ec-11e7-9260-4663796b7078', 1, 80
-        //        );
-        //
-
-
-        return null;
     }
 
 
 }
+//
+//        INSERT INTO `users` (`uuid`, `userName`, `email`, `firstName`, `secondName`, `lastName`, `address`) VALUES
+//                ('a0aafa4b-2447-11e7-9260-4663796b7078', 'vasya', 'vasya@yandex.ru', 'Василий', 'Петрович', 'Исаков', 'ввв ленингад эксбб точка ру');
+//
+//
+//        INSERT INTO `products` (`uuid`, `name`, `description`, `quantity`, `cost`) VALUES
+//                ('4fb9a0da-2444-11e7-9260-4663796b7078', 'Хлеб', 'Вкусненький, свеженький хлебушек', 50, 35),
+//                ('b2ccd701-23ec-11e7-9260-4663796b7078', 'Молоко', 'Вкусное, свежее молочко', 25, 80);
+//
+//        INSERT INTO `orders`(`uuid`, `uuid_user`, `date`, `cost`) VALUES
+//                ('5b54e942-2502-11e7-9260-4663796b7078','a0aafa4b-2447-11e7-9260-4663796b7078',2017-03-19,80);
+//
+//        INSERT INTO  `orderProducts` (  `uuid` ,  `uuid_order` ,  `uuid_product` ,  `count` ,  `cost` )
+//        VALUES (
+//                '688ac6a7-24f7-11e7-9260-4663796b7078',  '5b54e942-2502-11e7-9260-4663796b7078',  'b2ccd701-23ec-11e7-9260-4663796b7078', 1, 80
+//        );
+//

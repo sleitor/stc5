@@ -7,14 +7,7 @@ package com.company;
 import market.DataBaseConnector;
 import market.converter.Object2XML;
 import market.converter.XML2Object;
-import market.importer.OrderProductType;
-import market.importer.OrderType;
-import market.importer.ProductType;
-import market.importer.UserType;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.Scanner;
 
 import static market.DataBaseConnector.*;
 
@@ -23,37 +16,52 @@ public class Main {
     public static void main(String[] args) {
 
 
+        String x = "0";
+        while (x != "5") {
+            x = "0";
 
-//        Object2XML.user2XML();
+            System.out.println( "What do You want?" );
+            System.out.println( "" );
+            System.out.println( "1: Make a backup" );
+            System.out.println( "2: Drop All Table" );
+            System.out.println( "3: Create Table" );
+            System.out.println( "4: Restore Backup" );
+            System.out.println( "5: Exit" );
+            System.out.print( ":->" );
+            Scanner scanner = new Scanner( System.in );
+            String res = scanner.next();
 
-//        Object2XML.product2XML();
-//
-//        Object2XML.user2XML();
-//
-//        Object2XML.order2XML();
-//
-//        Object2XML.orderProduct2XML();
+            switch(res) {
+                case "1":
 
-/**/
-//        ArrayList<UserType> userTypes = XML2Object.XML2User();
-//        System.out.println(userTypes.size());
-
-//        ArrayList<ProductType> productTypes = XML2Object.XML2Product();
-//        System.out.println(productTypes.size());
-//
-//        ArrayList<OrderProductType> orderProductTypes = XML2Object.XML2OrderProduct();
-//        System.out.println(orderProductTypes.size());
-//
-//        ArrayList<OrderType> orderTypes = XML2Object.XML2Order();
-//        System.out.println(orderTypes.size());
-
-//        DataBaseConnector.setProducts( XML2Object.XML2Product() );
-        DataBaseConnector.setUsers( XML2Object.XML2User() );
-
-/*
-        dropTable();
-        createTable();
-/**/
+                    Object2XML.user2XML();
+                    Object2XML.product2XML();
+                    Object2XML.order2XML();
+                    Object2XML.orderProduct2XML();
+                    System.out.println( "Done!" );
+                    break;
+                case "2":
+                    dropTable();
+                    System.out.println( "Done!" );
+                    break;
+                case "3":
+                    createTable();
+                    System.out.println( "Done!" );
+                    break;
+                case "4":
+                    DataBaseConnector.setProducts( XML2Object.XML2Product() );
+                    DataBaseConnector.setUsers( XML2Object.XML2User() );
+                    DataBaseConnector.setOrders( XML2Object.XML2Order() );
+                    DataBaseConnector.setOrderProducts( XML2Object.XML2OrderProduct() );
+                    System.out.println( "Done!" );
+                    break;
+                case "5":
+                    System.out.println("Auf Wiedersehen!!");
+                    return;
+                default:
+                    System.out.println( "Incorrect. Try again!" );
+            }
+        }
     }
 
 }
