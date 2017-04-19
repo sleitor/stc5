@@ -36,6 +36,7 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OrderProductType", propOrder = {
     "uuid",
+    "order",
     "product",
     "count",
     "cost"
@@ -47,7 +48,10 @@ public class OrderProductType {
     @XmlElement(required = true)
     protected String uuid;
     @XmlElement(required = true)
-    protected ProductType product;
+    protected String order;
+    @XmlElement(required = true)
+//    protected ProductType product;
+    protected String product;
     protected int count;
     protected float cost;
 
@@ -83,9 +87,12 @@ public class OrderProductType {
      *     {@link ProductType }
      *     
      */
-    public ProductType getProduct() {
+    public String getProduct() {
         return product;
     }
+//    public ProductType getProduct() {
+//        return product;
+//    }
 
     /**
      * Sets the value of the product property.
@@ -95,9 +102,12 @@ public class OrderProductType {
      *     {@link ProductType }
      *     
      */
-    public void setProduct(ProductType value) {
+    public void setProduct(String value) {
         this.product = value;
     }
+//    public void setProduct(ProductType value) {
+//        this.product = value;
+//    }
 
     /**
      * Gets the value of the count property.
@@ -131,4 +141,7 @@ public class OrderProductType {
         this.cost = value;
     }
 
+    public void setOrder(String order) {
+        this.order = order;
+    }
 }

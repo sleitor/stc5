@@ -48,7 +48,8 @@ public class OrderType {
     @XmlElement(required = true)
     protected String uuid;
     @XmlElement(required = true)
-    protected UserType user;
+    protected String user;
+//    protected UserType user;
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar date;
@@ -86,7 +87,10 @@ public class OrderType {
      *     {@link UserType }
      *     
      */
-    public UserType getUser() {
+//    public UserType getUser() {
+//        return user;
+//    }
+    public String getUser() {
         return user;
     }
 
@@ -98,9 +102,12 @@ public class OrderType {
      *     {@link UserType }
      *     
      */
-    public void setUser(UserType value) {
+    public void setUser(String value) {
         this.user = value;
     }
+//    public void setUser(UserType value) {
+//        this.user = value;
+//    }
 
     /**
      * Gets the value of the date property.

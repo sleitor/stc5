@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<productType>
+    <uuid>4fb9a0da-2444-11e7-9260-4663796b7079</uuid>
+    <name>Хлеб</name>
+    <description>Вкусненький, свеженький хлебушек</description>
+    <quantity>50</quantity>
+    <cost>35.0</cost>
+</productType>
