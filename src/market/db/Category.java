@@ -12,6 +12,7 @@ public class Category {
     private String name;
     private Set<Product> products;
 
+    /** Конструктор, написанный вручную для категории продуктов */
     public Category(String name, Set<Product> products) {
         this.name = name;
         this.products = products;

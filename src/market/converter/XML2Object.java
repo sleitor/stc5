@@ -18,6 +18,7 @@ import java.util.UUID;
  */
 public class XML2Object {
 
+    /** Метод для загрузки пользователей в Базу данных */
     public static ArrayList<UserType> XML2User() {
 
         int i = 0;
@@ -41,6 +42,7 @@ public class XML2Object {
         return userTypes;
     }
 
+    /** Метод для загрузки продуктов в Базу данных */
     public static ArrayList<ProductType> XML2Product() {
 
         int i = 0;
@@ -64,7 +66,7 @@ public class XML2Object {
         return productTypes;
     }
 
-
+    /** Метод для загрузки продуктов из закаов в Базу данных */
     public static ArrayList<OrderProductType> XML2OrderProduct() {
 
         int i = 0;
@@ -89,6 +91,7 @@ public class XML2Object {
         return orderProductTypes;
     }
 
+    /** Метод для загрузки заказов в Базу данных */
     public static ArrayList<OrderType> XML2Order() {
 
         int i = 0;
@@ -108,7 +111,6 @@ public class XML2Object {
             } catch(JAXBException e) {
                 e.printStackTrace();
             }
-
         }
         return orderTypes;
     }

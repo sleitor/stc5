@@ -13,10 +13,18 @@ public class Product {
     private int quantity;
     private int cost;
 
+    /** Конструктор, написанный вручную для продуктов */
+    public Product(UUID uuid, String name, String description, int quantity, int cost) {
+        this.uuid = uuid;
+        this.name = name;
+        this.description = description;
+        this.quantity = quantity;
+        this.cost = cost;
+    }
+
     public int getCost() {
         return cost;
     }
-
 
     public UUID getId() {
         return uuid;
@@ -33,20 +41,5 @@ public class Product {
     public int getQuantity() {
         return quantity;
     }
-
-    public Product(UUID uuid, String name, String description, int quantity, int cost) {
-        this.uuid = uuid;
-        this.name = name;
-        this.description = description;
-        this.quantity = quantity;
-        this.cost = cost;
-    }
-
-    //    public Product(String name, String description, int quantity) {
-//        this.id = id;
-//        this.name = name;
-//        this.description = description;
-//        this.quantity = quantity;
-//    }
 
 }

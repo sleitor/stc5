@@ -19,6 +19,7 @@ import javax.xml.bind.Marshaller;
  */
 public class Object2XML {
 
+    /** Метод для выгрузки пользователей в XML */
     public static void user2XML() {
 
         ArrayList<UserType> users = DataBaseConnector.getUsers();
@@ -47,6 +48,7 @@ public class Object2XML {
         }
     }
 
+    /** Метод для выгрузки продуктов в XML */
     public static void product2XML() {
 
         ArrayList<ProductType> products = DataBaseConnector.getProducts();
@@ -72,6 +74,7 @@ public class Object2XML {
         }
     }
 
+    /** Метод для выгрузки купленных в заказе продуктов в XML */
     public static void orderProduct2XML() {
 
         ArrayList<OrderProductType> orderProducts = DataBaseConnector.getOrderProducts();
@@ -98,6 +101,7 @@ public class Object2XML {
         }
     }
 
+    /** Метод для выгрузки заказов в XML */
     public static void order2XML() {
 
         ArrayList<OrderType> orders = DataBaseConnector.getOrders();

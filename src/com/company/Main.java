@@ -11,8 +11,13 @@ import java.util.Scanner;
 
 import static market.DataBaseConnector.*;
 
+/** Основной класс программы.
+ * Содержит меню для управления действиями внутри программы.
+ */
+
 public class Main {
 
+    /** Стартоый метод. С него все начинается. */
     public static void main(String[] args) {
 
 

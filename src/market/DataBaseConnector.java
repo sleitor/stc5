@@ -21,6 +21,7 @@ import java.util.*;
  */
 public class DataBaseConnector {
 
+    /** Примитивное создание коннекта */
     public static Connection initConnection() {
 
         Connection connection = null;
@@ -40,6 +41,7 @@ public class DataBaseConnector {
         return connection;
     }
 
+    /** Создание таблиц в БД */
     public static void createTable() {
 
         Connection db = initConnection();
@@ -58,6 +60,7 @@ public class DataBaseConnector {
         }
     }
 
+    /** Удаление таблиц в БД */
     public static void dropTable() {
 
         Connection db = initConnection();
@@ -69,6 +72,7 @@ public class DataBaseConnector {
         }
     }
 
+    /** Выгрузка из БД Продуктов */
     public static ArrayList<ProductType> getProducts() {
 
         Connection db = initConnection();
@@ -97,6 +101,7 @@ public class DataBaseConnector {
         return null;
     }
 
+    /** Выгрузка из БД пользователей */
     public static ArrayList<UserType> getUsers() {
 
         Connection db = initConnection();
@@ -132,6 +137,7 @@ public class DataBaseConnector {
 
     }
 
+    /** Выгрузка из БД заказов */
     public static ArrayList<OrderType> getOrders() {
 
         Connection db = initConnection();
@@ -174,6 +180,7 @@ public class DataBaseConnector {
 
     }
 
+    /** Выгрузка из БД продуктов в заказах */
     public static ArrayList<OrderProductType> getOrderProducts() {
 
         Connection db = initConnection();
@@ -225,7 +232,7 @@ public class DataBaseConnector {
         return null;
     }
 
-
+    /** Загрузка в БД продуктов */
     public static void setProducts(ArrayList<ProductType> products) {
 
         Connection db = initConnection();
@@ -250,6 +257,7 @@ public class DataBaseConnector {
 
     }
 
+    /** Загрузка в БД пользователей */
     public static void setUsers(ArrayList<UserType> users) {
 
         Connection db = initConnection();
@@ -276,6 +284,7 @@ public class DataBaseConnector {
 
     }
 
+    /** Выгрузка в БД заказов */
     public static void setOrders(ArrayList<OrderType> orders) {
 
         Connection db = initConnection();
@@ -307,6 +316,7 @@ public class DataBaseConnector {
         }
     }
 
+    /** Выгрузка в БД продуктов в заказах*/
     public static void setOrderProducts(ArrayList<OrderProductType> orderProducts) {
 
         Connection db = initConnection();

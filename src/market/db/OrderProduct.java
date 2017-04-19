@@ -13,6 +13,7 @@ public class OrderProduct {
     private int count;
     private float cost;
 
+    /** Конструктор, написанный вручную для продуктов к заказу */
     public OrderProduct(UUID uuid, Product product, int count, float cost) {
         this.uuid = uuid;
         this.product = product;
