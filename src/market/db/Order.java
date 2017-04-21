@@ -15,7 +15,7 @@ public class Order {
     private Set<OrderProduct> orderProductSet;
     private float cost;
 
-    /** Конструктор, написанный вручную для заказов продуктов */
+    /** Pojo класс, написанный вручную для заказов продуктов */
     public Order(User user, Date date, Set<OrderProduct> orderProductSet, float cost) {
         this.user = user;
         this.date = date;

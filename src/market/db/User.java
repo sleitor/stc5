@@ -40,7 +40,7 @@ public class User {
         return address;
     }
 
-    /** Конструктор, написанный вручную для пользователей */
+    /** Pojo класс, написанный вручную для пользователей */
     public User(UUID uuid, String userName, String email, String firstName, String secondName, String thirdName, String address) {
         this.uuid = uuid;
         this.userName = userName;

@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42398c1f-d69d-4b28-ba71-1713f7bee44b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/untitled104/com/company/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/DataBaseConnector.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/DataBaseConnector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/converter/Object2XML.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/converter/Object2XML.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/converter/XML2Object.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/converter/XML2Object.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/db/Category.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/db/Category.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/db/Order.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/db/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/db/OrderProduct.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/db/OrderProduct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/db/Product.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/db/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled104/market/db/User.class" afterPath="$PROJECT_DIR$/out/production/untitled104/market/db/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/DataBaseConnector.java" afterPath="$PROJECT_DIR$/src/market/DataBaseConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/converter/Object2XML.java" afterPath="$PROJECT_DIR$/src/market/converter/Object2XML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/converter/XML2Object.java" afterPath="$PROJECT_DIR$/src/market/converter/XML2Object.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/db/Category.java" afterPath="$PROJECT_DIR$/src/market/db/Category.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/db/Order.java" afterPath="$PROJECT_DIR$/src/market/db/Order.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/db/OrderProduct.java" afterPath="$PROJECT_DIR$/src/market/db/OrderProduct.java" />
@@ -21,30 +27,81 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="XML2Object.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/market/converter/XML2Object.java">
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/market/db/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+            <state relative-caret-position="357">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="63" column="56" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#XML2User#0;class#XML2Object#0" expanded="false" />
-                <element signature="method#XML2Product#0;class#XML2Object#0" expanded="false" />
-                <element signature="method#XML2OrderProduct#0;class#XML2Object#0" expanded="false" />
-                <element signature="method#XML2Order#0;class#XML2Object#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/market/db/Order.java">
+      <file leaf-file-name="DataBaseConnector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/market/DataBaseConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+            <state relative-caret-position="442">
+              <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initConnection#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#createTable#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#dropTable#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#getUsers#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#getOrders#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#getOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#setUsers#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#setOrders#0;class#DataBaseConnector#0" expanded="false" />
+                <element signature="method#setOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
+                <marker date="1492694207030" expanded="true" signature="1716:1898" ph="CREATE TABLE... users" />
+                <marker date="1492694207030" expanded="true" signature="1936:2073" ph="CREATE TABLE... products" />
+                <marker date="1492694207030" expanded="true" signature="2357:2622" ph="CREATE TABLE... orderProducts" />
+                <marker date="1492694207030" expanded="true" signature="2623:2642" ph="UPDATE NO AC... " />
+                <marker date="1492694207030" expanded="true" signature="2643:2798" ph="DELETE NO AC... " />
+                <marker date="1492694207030" expanded="true" signature="3102:3151" ph="DROP TABLE o... " />
+                <marker date="1492694207030" expanded="true" signature="3505:3527" ph="SELECT * FRO... products" />
+                <marker date="1492694207030" expanded="true" signature="4450:4464" ph="SELECT * FRO... USERS" />
+                <marker date="1492694207030" expanded="true" signature="4450:4469" ph="SELECT * FRO... users" />
+                <marker date="1492694207030" expanded="true" signature="5495:5515" ph="SELECT * FRO... orders" />
+                <marker date="1492694207030" expanded="true" signature="6756:6783" ph="SELECT * FRO... orderPtoducts" />
+                <marker date="1492694207030" expanded="true" signature="8956:9037" ph="INSERT INTO products... " />
+                <marker date="1492694207030" expanded="true" signature="9877:9983" ph="INSERT INTO products... " />
+                <marker date="1492694207030" expanded="true" signature="10847:10912" ph="INSERT INTO order... " />
+                <marker date="1492694207030" expanded="true" signature="11945:12035" ph="INSERT INTO order... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/market/db/Category.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -54,82 +111,9 @@
         <entry file="file://$PROJECT_DIR$/src/market/db/OrderProduct.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="method#OrderProduct#0;class#OrderProduct#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/market/db/Product.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/market/db/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-              <folding>
-                <element signature="method#User#0;class#User#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataBaseConnector.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/market/DataBaseConnector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="318" column="18" lean-forward="false" selection-start-line="318" selection-start-column="18" selection-end-line="318" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initConnection#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#createTable#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#dropTable#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#getProducts#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#getUsers#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#getOrders#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#getOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#setProducts#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#setUsers#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#setOrders#0;class#DataBaseConnector#0" expanded="false" />
-                <element signature="method#setOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-                <marker date="1492629285385" expanded="true" signature="1716:1898" ph="CREATE TABLE... users" />
-                <marker date="1492629285385" expanded="true" signature="1936:2073" ph="CREATE TABLE... products" />
-                <marker date="1492629285385" expanded="true" signature="2357:2622" ph="CREATE TABLE... orderProducts" />
-                <marker date="1492629285385" expanded="true" signature="2623:2642" ph="UPDATE NO AC... " />
-                <marker date="1492629285385" expanded="true" signature="2643:2798" ph="DELETE NO AC... " />
-                <marker date="1492629285385" expanded="true" signature="3102:3151" ph="DROP TABLE o... " />
-                <marker date="1492629285385" expanded="true" signature="3505:3527" ph="SELECT * FRO... products" />
-                <marker date="1492629285385" expanded="true" signature="4450:4464" ph="SELECT * FRO... USERS" />
-                <marker date="1492629285385" expanded="true" signature="4450:4469" ph="SELECT * FRO... users" />
-                <marker date="1492629285385" expanded="true" signature="5495:5515" ph="SELECT * FRO... orders" />
-                <marker date="1492629285385" expanded="true" signature="6756:6783" ph="SELECT * FRO... orderPtoducts" />
-                <marker date="1492629285385" expanded="true" signature="8956:9037" ph="INSERT INTO products... " />
-                <marker date="1492629285385" expanded="true" signature="9798:9904" ph="INSERT INTO products... " />
-                <marker date="1492629285385" expanded="true" signature="10768:10833" ph="INSERT INTO order... " />
-                <marker date="1492629285385" expanded="true" signature="11866:11956" ph="INSERT INTO order... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderProductType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/market/importer/OrderProductType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="148" column="12" lean-forward="true" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
-              <folding>
-                <element signature="e#3366#3367#0" expanded="true" />
-                <element signature="e#3394#3395#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,8 +122,8 @@
       <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/market/db/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="method#Product#0;class#Product#0" expanded="false" />
               </folding>
@@ -147,22 +131,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderProduct.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/market/db/OrderProduct.xsd">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/market/db/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/market/db/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="387">
+              <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+              <folding>
+                <element signature="method#User#0;class#User#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -217,10 +193,10 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/market/converter/Object2XML.java" />
         <option value="$PROJECT_DIR$/src/market/converter/XML2Object.java" />
-        <option value="$PROJECT_DIR$/src/market/db/Category.java" />
         <option value="$PROJECT_DIR$/src/market/db/Order.java" />
-        <option value="$PROJECT_DIR$/src/market/db/Product.java" />
+        <option value="$PROJECT_DIR$/src/market/db/Category.java" />
         <option value="$PROJECT_DIR$/src/market/db/OrderProduct.java" />
+        <option value="$PROJECT_DIR$/src/market/db/Product.java" />
         <option value="$PROJECT_DIR$/src/market/db/User.java" />
         <option value="$PROJECT_DIR$/src/market/DataBaseConnector.java" />
       </list>
@@ -257,7 +233,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -277,86 +252,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="converter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stc5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,6 +344,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -462,6 +358,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="GenericSQL&#10;PostgreSQL&#10;MySQL" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -880,45 +777,46 @@
       <workItem from="1491469792117" duration="4118000" />
       <workItem from="1491476706453" duration="70000" />
       <workItem from="1492314124025" duration="18889000" />
-      <workItem from="1492599316225" duration="26181000" />
+      <workItem from="1492599316225" duration="28514000" />
+      <workItem from="1492693378894" duration="4795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74635000" />
+    <option name="totallyTimeSpent" value="81763000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28431374" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48608837" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229954" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25037822" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -932,7 +830,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/market/DataBaseConnector.java</url>
-          <line>294</line>
+          <line>297</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
@@ -1071,9 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="docComment;class#ObjectFactory#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,14 +980,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/market/db/ProductType.java" />
-    <entry file="file://$PROJECT_DIR$/dump/UserType.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/UserType.xml" />
     <entry file="file://$PROJECT_DIR$/src/market/importer/UserType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1111,21 +999,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dump/ProductType.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/ProductType.xml" />
     <entry file="file://$PROJECT_DIR$/src/market/importer/ProductType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
           <folding>
-            <element signature="e#3409#3410#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
+            <element signature="e#3409#3410#0" expanded="false" />
+            <element signature="e#3446#3447#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1134,7 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="209" column="80" lean-forward="false" selection-start-line="209" selection-start-column="80" selection-end-line="209" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +1022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="18" column="118" lean-forward="false" selection-start-line="18" selection-start-column="118" selection-end-line="18" selection-end-column="118" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,11 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="131" column="44" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3155#3156#0" expanded="false" />
-            <element signature="e#3188#3189#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="130" column="13" lean-forward="false" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,6 +1047,50 @@
             <element signature="e#71057#71058#0" expanded="false" />
             <element signature="e#71104#71105#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/db/Order.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/converter/XML2Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+          <folding>
+            <element signature="method#XML2User#0;class#XML2Object#0" expanded="false" />
+            <element signature="method#XML2Product#0;class#XML2Object#0" expanded="false" />
+            <element signature="method#XML2OrderProduct#0;class#XML2Object#0" expanded="false" />
+            <element signature="method#XML2Order#0;class#XML2Object#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/db/OrderProduct.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/importer/OrderProductType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="148" column="12" lean-forward="true" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/db/Product.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,49 +1134,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/db/Order.xsd">
+    <entry file="file://$PROJECT_DIR$/src/market/converter/Object2XML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="51" />
+        <state relative-caret-position="226">
+          <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/market/db/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="method#Product#0;class#Product#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/converter/Object2XML.java">
+    <entry file="file://$PROJECT_DIR$/src/market/db/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="104" column="35" lean-forward="false" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        <state relative-caret-position="387">
+          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#user2XML#0;class#Object2XML#0" expanded="false" />
-            <element signature="method#product2XML#0;class#Object2XML#0" expanded="false" />
-            <element signature="method#orderProduct2XML#0;class#Object2XML#0" expanded="false" />
-            <element signature="method#order2XML#0;class#Object2XML#0" expanded="false" />
+            <element signature="method#User#0;class#User#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/converter/XML2Object.java">
+    <entry file="file://$PROJECT_DIR$/src/market/db/OrderProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+        <state relative-caret-position="238">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#XML2User#0;class#XML2Object#0" expanded="false" />
-            <element signature="method#XML2Product#0;class#XML2Object#0" expanded="false" />
-            <element signature="method#XML2OrderProduct#0;class#XML2Object#0" expanded="false" />
-            <element signature="method#XML2Order#0;class#XML2Object#0" expanded="false" />
+            <element signature="method#OrderProduct#0;class#OrderProduct#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1267,109 +1175,60 @@
     <entry file="file://$PROJECT_DIR$/src/market/db/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/db/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/db/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="method#Product#0;class#Product#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/db/OrderProduct.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/db/OrderProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-          <folding>
-            <element signature="method#OrderProduct#0;class#OrderProduct#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/db/Product.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/db/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-          <folding>
-            <element signature="method#User#0;class#User#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/importer/OrderProductType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="148" column="12" lean-forward="true" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
-          <folding>
-            <element signature="e#3366#3367#0" expanded="true" />
-            <element signature="e#3394#3395#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/market/DataBaseConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="318" column="18" lean-forward="false" selection-start-line="318" selection-start-column="18" selection-end-line="318" selection-end-column="18" />
+        <state relative-caret-position="442">
+          <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initConnection#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#createTable#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#dropTable#0;class#DataBaseConnector#0" expanded="false" />
-            <element signature="method#getProducts#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#getUsers#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#getOrders#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#getOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-            <element signature="method#setProducts#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#setUsers#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#setOrders#0;class#DataBaseConnector#0" expanded="false" />
             <element signature="method#setOrderProducts#0;class#DataBaseConnector#0" expanded="false" />
-            <marker date="1492629285385" expanded="true" signature="1716:1898" ph="CREATE TABLE... users" />
-            <marker date="1492629285385" expanded="true" signature="1936:2073" ph="CREATE TABLE... products" />
-            <marker date="1492629285385" expanded="true" signature="2357:2622" ph="CREATE TABLE... orderProducts" />
-            <marker date="1492629285385" expanded="true" signature="2623:2642" ph="UPDATE NO AC... " />
-            <marker date="1492629285385" expanded="true" signature="2643:2798" ph="DELETE NO AC... " />
-            <marker date="1492629285385" expanded="true" signature="3102:3151" ph="DROP TABLE o... " />
-            <marker date="1492629285385" expanded="true" signature="3505:3527" ph="SELECT * FRO... products" />
-            <marker date="1492629285385" expanded="true" signature="4450:4464" ph="SELECT * FRO... USERS" />
-            <marker date="1492629285385" expanded="true" signature="4450:4469" ph="SELECT * FRO... users" />
-            <marker date="1492629285385" expanded="true" signature="5495:5515" ph="SELECT * FRO... orders" />
-            <marker date="1492629285385" expanded="true" signature="6756:6783" ph="SELECT * FRO... orderPtoducts" />
-            <marker date="1492629285385" expanded="true" signature="8956:9037" ph="INSERT INTO products... " />
-            <marker date="1492629285385" expanded="true" signature="9798:9904" ph="INSERT INTO products... " />
-            <marker date="1492629285385" expanded="true" signature="10768:10833" ph="INSERT INTO order... " />
-            <marker date="1492629285385" expanded="true" signature="11866:11956" ph="INSERT INTO order... " />
+            <marker date="1492694207030" expanded="true" signature="1716:1898" ph="CREATE TABLE... users" />
+            <marker date="1492694207030" expanded="true" signature="1936:2073" ph="CREATE TABLE... products" />
+            <marker date="1492694207030" expanded="true" signature="2357:2622" ph="CREATE TABLE... orderProducts" />
+            <marker date="1492694207030" expanded="true" signature="2623:2642" ph="UPDATE NO AC... " />
+            <marker date="1492694207030" expanded="true" signature="2643:2798" ph="DELETE NO AC... " />
+            <marker date="1492694207030" expanded="true" signature="3102:3151" ph="DROP TABLE o... " />
+            <marker date="1492694207030" expanded="true" signature="3505:3527" ph="SELECT * FRO... products" />
+            <marker date="1492694207030" expanded="true" signature="4450:4464" ph="SELECT * FRO... USERS" />
+            <marker date="1492694207030" expanded="true" signature="4450:4469" ph="SELECT * FRO... users" />
+            <marker date="1492694207030" expanded="true" signature="5495:5515" ph="SELECT * FRO... orders" />
+            <marker date="1492694207030" expanded="true" signature="6756:6783" ph="SELECT * FRO... orderPtoducts" />
+            <marker date="1492694207030" expanded="true" signature="8956:9037" ph="INSERT INTO products... " />
+            <marker date="1492694207030" expanded="true" signature="9877:9983" ph="INSERT INTO products... " />
+            <marker date="1492694207030" expanded="true" signature="10847:10912" ph="INSERT INTO order... " />
+            <marker date="1492694207030" expanded="true" signature="11945:12035" ph="INSERT INTO order... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="63" column="56" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/db/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,6 +1289,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

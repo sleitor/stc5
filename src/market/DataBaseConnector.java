@@ -246,8 +246,11 @@ public class DataBaseConnector {
                 statement.setString( 3, product.getDescription() );
                 statement.setFloat( 4, product.getQuantity() );
                 statement.setFloat( 5, product.getCost() );
-                statement.executeUpdate();
+                statement.addBatch();
+//                statement.executeUpdate();
             }
+
+            statement.executeBatch();
 
             db.close();
 

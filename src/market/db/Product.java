@@ -13,7 +13,7 @@ public class Product {
     private int quantity;
     private int cost;
 
-    /** Конструктор, написанный вручную для продуктов */
+    /** Pojo класс, написанный вручную для продуктов */
     public Product(UUID uuid, String name, String description, int quantity, int cost) {
         this.uuid = uuid;
         this.name = name;
