@@ -1,20 +1,15 @@
 package com.company;
 
 /*
-Вариант 1
-
-Необходимо разработать программу, которая получает на вход список ресурсов,
-содержащих текст, и считает общее количество вхождений (для всех ресурсов)
-каждого слова. Каждый ресурс должен быть обработан в отдельном потоке, текст
-не должен содержать инностранных символов, только кириллица, знаки препинания
-и цифры. Отчет должен строиться в режиме реального времени, знаки препинания
-и цифры в отчет не входят. Все ошибки должны быть корректно обработаны,
-все API покрыто модульными тестами
+Необходимо разработать программу, которая получает на вход список ресурсов, содержащих набор
+чисел и считает сумму всех положительных четных. Каждый ресурс должен быть обработан в
+отдельном потоке, набор должен содержать лишь числа, унарный оператор "-" и пробелы.
+Общая сумма должна отображаться на экране и изменяться в режиме реального времени.
+Запуск потоков реализовать через ссылки на методы, итоговый подсчет суммы через stream API
 */
 
-import com.sun.istack.internal.NotNull;
-
-import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -23,18 +18,18 @@ public class Main {
         System.out.println ("Запуск основного потока.");
         System.out.println ();
 
-        Resource resource[] = new Resource[5];
-
-        for (Integer i = 0; i < resource.length; i++) {
-
-            resource[i] = new Resource(i.toString () , new File("src\\com\\company\\Resources\\file" + i));
-            Reader reader = new Reader (resource[i]);
-            reader.start ();
-        }
+        List<Integer> numbers1 = Arrays.asList(-1, 2, -3, 4, -5, 6);
+        List<Integer> numbers2 = Arrays.asList(-4, 5, -6, -7, -8, 9);
 
 
+//        numbers1.forEach((Integer value) -> System.out.println(value));
+//        numbers2.forEach((Integer value) -> System.out.println(value));
+
+        Integer sumOdd = numbers1.stream().filter(o -> o > 0).reduce((s1, s2) -> s1 + s2).orElse(0);
 
 
+
+        Integer sumOd2 = numbers2.stream().filter(o -> o > 0).reduce((s1, s2) -> s1 + s2).orElse(0);
 
         System.out.println ("Завершение основного потока.");
 
